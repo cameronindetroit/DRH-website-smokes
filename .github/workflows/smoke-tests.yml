@@ -1,0 +1,72 @@
+name: Smoke Tests
+
+on:
+  schedule:
+    # Runs daily at 7:00 AM UTC (2:00 AM CDT)
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+    inputs:
+      browser:
+        description: 'Browser to test on'
+        required: false
+        default: 'chromium'
+        type: choice
+        options:
+          - chromium
+          - firefox
+          - webkit
+          - all
+
+jobs:
+  smoke:
+    name: Smoke Tests (${{ github.event.inputs.browser || 'chromium' }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps ${{ github.event.inputs.browser != 'all' && github.event.inputs.browser || 'chromium' }}
+
+      - name: Create env file
+        run: |
+          mkdir -p src/config
+          touch src/config/.env.qa
+
+      - name: Run smoke tests
+        run: |
+          BROWSER="${{ github.event.inputs.browser || 'chromium' }}"
+          if [ "$BROWSER" = "all" ]; then
+            npx playwright test src/tests/smoke
+          else
+            npx playwright test src/tests/smoke --project="$BROWSER"
+          fi
+        env:
+          CI: true
+
+      - name: Upload HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: smoke-report-${{ github.event.inputs.browser || 'chromium' }}-${{ github.run_number }}
+          path: playwright-report/
+          retention-days: 30
+
+      - name: Upload test results
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ github.run_number }}
+          path: test-results/
+          retention-days: 7

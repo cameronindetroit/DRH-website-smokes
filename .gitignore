@@ -1,0 +1,15 @@
+node_modules/
+test-results/
+playwright-report/
+playwright/.cache/
+blob-report/
+tmp/
+
+# Environment files
+src/config/.env.*
+
+# Prompts (contain internal workflow instructions)
+prompts/
+
+# OS files
+.DS_Store

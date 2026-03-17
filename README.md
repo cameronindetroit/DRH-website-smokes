@@ -140,7 +140,6 @@ Each page or component in the application has a dedicated page object in `src/pa
 
 | Page Object | Represents |
 |-------------|------------|
-| `LoginPage.ts` | Login screen |
 | `HomePage.ts` | Home / landing page |
 | `DashboardPage.ts` | Main dashboard |
 | `DashboardGraphPage.ts` | Dashboard graph components |
@@ -189,14 +188,175 @@ Tests are organized into three tiers by scope:
 src/tests/
 ├── smoke/           ← fast deployment-gate checks
 │   ├── dashboard/
-│   └── login/
+│   ├── home/
+│   ├── navigation/
+│   ├── pages/
+│   └── privacy/
 ├── regression/      ← feature-level guards
-│   ├── dashboard/
-│   └── login/
+│   └── dashboard/
 └── e2e/             ← full user journey tests
-    ├── dashboard/
-    └── login/
+    └── dashboard/
 ```
+
+---
+
+## Smoke Tests — drhorton.com
+
+The smoke suite validates that every critical page on [drhorton.com](https://www.drhorton.com/) loads, renders key elements, and responds to basic user interactions. Tests are fast, independent, and designed to serve as a deployment gate.
+
+### Smoke Test Architecture
+
+```
+src/
+├── pages/
+│   ├── BasePage.ts              ← shared header / footer / nav / cookie-banner locators
+│   ├── HomePage.ts              ← hero, community search, logo
+│   ├── WhoWeArePage.ts          ← /who-we-are
+│   ├── SmartHomePage.ts         ← /smart-home
+│   ├── ServicesPage.ts          ← /services
+│   ├── CustomerCarePage.ts      ← /customer-care
+│   ├── ContactUsPage.ts         ← /contact-us-page
+│   ├── WarrantyPage.ts          ← /warranty
+│   ├── MilitaryBenefitsPage.ts  ← /military-benefits
+│   ├── CareersPage.ts           ← /careers
+│   ├── StateLandingPage.ts      ← /:state (e.g. /texas)
+│   └── PageManager.ts           ← lazy-instantiation factory for all page objects
+└── tests/
+    ├── fixtures.ts              ← base fixture injecting PageManager as `pm`
+    └── smoke/
+        ├── home/
+        │   └── homeSmoke.spec.ts          ← SMK-001, 002, 012, 013, 017, 018
+        ├── navigation/
+        │   └── navigationSmoke.spec.ts    ← SMK-003
+        ├── pages/
+        │   └── pageLoadSmoke.spec.ts      ← SMK-004 – 011, 016
+        └── privacy/
+            └── cookieSmoke.spec.ts        ← SMK-014, 015
+```
+
+**How it connects:**
+
+1. **BasePage** provides common locators (logo, nav, footer, cookie banner) and methods (`goto()`, `dismissCookieBanner()`, `navLink()`).
+2. Each **Page Object** extends `BasePage`, adding page-specific locators (headings, forms) and an `open()` method.
+3. **PageManager** exposes every page object via lazy getters — pages are only instantiated when accessed.
+4. **fixtures.ts** extends Playwright's `test` to inject a `pm` (PageManager) instance into every test.
+5. **Spec files** use `pm` to navigate, interact, assert, and attach screenshots:
+
+```ts
+test('SMK-001: Home page loads', { tag: ['@smoke'] }, async ({ pm, page }) => {
+  await test.step('Verify page title', async () => {
+    await expect(page).toHaveTitle(/D\.R\. Horton America.*Largest Home Builder/i);
+  });
+  await test.step('Attach screenshot', async () => {
+    await test.info().attach('home-page-loaded', {
+      body: await page.screenshot(),
+      contentType: 'image/png',
+    });
+  });
+});
+```
+
+### Test Inventory
+
+| ID | Test | Spec File |
+|----|------|-----------|
+| SMK-001 | Home page loads | `homeSmoke.spec.ts` |
+| SMK-002 | Logo renders on home page | `homeSmoke.spec.ts` |
+| SMK-003 | Main navigation links resolve | `navigationSmoke.spec.ts` |
+| SMK-004 | Who We Are page loads | `pageLoadSmoke.spec.ts` |
+| SMK-005 | Smart Home page loads | `pageLoadSmoke.spec.ts` |
+| SMK-006 | Services page loads | `pageLoadSmoke.spec.ts` |
+| SMK-007 | Customer Care page loads | `pageLoadSmoke.spec.ts` |
+| SMK-008 | Contact Us page loads | `pageLoadSmoke.spec.ts` |
+| SMK-009 | Warranty page loads | `pageLoadSmoke.spec.ts` |
+| SMK-010 | Military Benefits page loads | `pageLoadSmoke.spec.ts` |
+| SMK-011 | Careers page loads | `pageLoadSmoke.spec.ts` |
+| SMK-012 | Community search is present | `homeSmoke.spec.ts` |
+| SMK-013 | Footer renders on home page | `homeSmoke.spec.ts` |
+| SMK-014 | Cookie banner displays | `cookieSmoke.spec.ts` |
+| SMK-015 | Cookie banner dismissible | `cookieSmoke.spec.ts` |
+| SMK-016 | State landing page loads (Texas) | `pageLoadSmoke.spec.ts` |
+| SMK-017 | Skip to main content link | `homeSmoke.spec.ts` |
+| SMK-018 | Top banner visible | `homeSmoke.spec.ts` |
+
+### Running Smoke Tests
+
+```bash
+# Run all smoke tests (all browsers)
+npm run smoke
+
+# Run by category
+npm run smoke:home          # Home page tests
+npm run smoke:navigation    # Navigation link tests
+npm run smoke:pages         # Page load tests
+npm run smoke:privacy       # Cookie banner tests
+
+# Run Chromium only
+npx playwright test src/tests/smoke --project=chromium
+
+# Run by @smoke tag
+npx playwright test --grep @smoke
+
+# Run headed (visible browser)
+npx playwright test src/tests/smoke --headed --project=chromium
+```
+
+### Report with Screenshots
+
+Every smoke test attaches a full-page screenshot to the Playwright HTML report. This gives immediate visual confirmation of each page's state at assertion time.
+
+**Open the report:**
+
+```bash
+npm run report
+```
+
+**What you see in the report:**
+
+```
+┌──────────────────────────────────────────────────┐
+│  Playwright Test Report                          │
+│  18 passed                                       │
+├──────────────────────────────────────────────────┤
+│  ▸ Home Page Smoke Tests           (6 tests)     │
+│  ▸ Navigation Smoke Tests          (1 test)      │
+│  ▸ Page Load Smoke Tests           (9 tests)     │
+│  ▸ Cookie Banner Smoke Tests       (2 tests)     │
+└──────────────────────────────────────────────────┘
+```
+
+Click into any test to see:
+
+1. **Steps** — Each `test.step()` is listed with pass/fail and duration.
+2. **Attachments** — Named screenshots appear inline below the steps:
+
+| Test | Attached Screenshot(s) |
+|------|------------------------|
+| SMK-001 | `home-page-loaded` |
+| SMK-002 | `logo-rendered` |
+| SMK-003 | `nav-who-we-are`, `nav-smart-home`, `nav-services`, `nav-customer-care` |
+| SMK-004 – SMK-011, SMK-016 | One per page (e.g. `who-we-are-page`, `smart-home-page`, …, `texas-landing-page`) |
+| SMK-012 | `community-search` |
+| SMK-013 | `footer-rendered` |
+| SMK-014 | `cookie-banner-visible` |
+| SMK-015 | `cookie-banner-dismissed` |
+| SMK-017 | `skip-to-main-link` |
+| SMK-018 | `top-banner-visible` |
+
+**Attachment pattern used in specs:**
+
+```ts
+await test.step('Attach screenshot', async () => {
+  await test.info().attach('descriptive-name', {
+    body: await page.screenshot(),
+    contentType: 'image/png',
+  });
+});
+```
+
+Screenshots are embedded directly in the HTML report — no external image hosting required. The report is fully self-contained in `playwright-report/index.html`.
+
+---
 
 ### NPM Scripts
 
@@ -210,12 +370,13 @@ src/tests/
 | `npm run ff` | `--project=firefox` | Firefox only |
 | `npm run wk` | `--project=webkit` | WebKit only |
 | `npm run smoke` | `src/tests/smoke` | All smoke tests |
+| `npm run smoke:home` | Smoke home suite | Home page smoke tests |
+| `npm run smoke:navigation` | Smoke navigation suite | Navigation link smoke tests |
+| `npm run smoke:pages` | Smoke pages suite | Page load smoke tests |
+| `npm run smoke:privacy` | Smoke privacy suite | Cookie banner smoke tests |
 | `npm run smoke:dashboard` | Smoke dashboard suite | Dashboard smoke tests |
-| `npm run smoke:login` | Smoke login suite | Login smoke tests |
 | `npm run dash` | Regression dashboard suite | Dashboard regression tests |
-| `npm run login` | Regression login suite | Login regression tests |
 | `npm run e2e:dashboard` | E2E dashboard suite | Dashboard E2E tests |
-| `npm run e2e:login` | E2E login suite | Login E2E tests |
 | `npm run last` | `--last-failed` | Re-run only failed tests |
 | `npm run report` | `show-report` | Open HTML report |
 
@@ -248,7 +409,49 @@ Both files are written to the `plans/` folder, date-stamped:
 2. Fill in the **Variables** table at the bottom (`TARGET_URL`, credentials, focus areas, etc.).
 3. Pass the completed prompt through the Playwright MCP server.
 4. Review the generated plan in `plans/`.
-5. Once approved, use a follow-up prompt to generate the actual Playwright test code.
+5. Once approved, use the smoke test generation prompt (below) to generate the actual Playwright test code.
+
+---
+
+### Smoke Test Generation Prompt
+
+**Location:** `prompts/smoke-test-generation.prompt.md`
+
+This is the **follow-up prompt** referenced above. After the test plan is approved, this prompt instructs the LLM to read the plan and generate production-ready Playwright smoke tests using the framework's built-in tooling.
+
+#### What It Does
+
+1. **Reads the Plan** — Parses every `SMK-*` test case from the approved test plan markdown.
+2. **Explores the Site** — Uses Playwright MCP browser tools to capture real, accessible selectors (`getByRole`, `getByLabel`, `getByText`, etc.).
+3. **Builds the POM** — Populates page classes (`BasePage`, `HomePage`, etc.) with discovered locators and action methods following the project's constructor-injection pattern.
+4. **Wires Fixtures** — Updates `fixtures.ts` with `PageManager` integration and layers smoke-specific fixtures on top.
+5. **Implements Specs** — One `test()` per `SMK-*` ID with `test.step()` for report clarity, `@smoke` tags for filtering, and screenshot attachments.
+6. **Updates Scripts** — Adds per-folder `smoke:*` npm scripts if missing.
+7. **Validates** — Runs compile check, lists tests, executes headed, reviews report, and fixes failures.
+
+#### Output
+
+| File | Purpose |
+|------|---------|
+| `src/pages/BasePage.ts` | Shared header/footer/banner/nav locators and methods |
+| `src/pages/HomePage.ts` | Home page POM (populated) |
+| `src/pages/PageManager.ts` | Factory providing all page objects (populated) |
+| Additional `*Page.ts` files | One per page referenced by smoke tests |
+| `src/tests/fixtures.ts` | Base fixture wiring PageManager |
+| `src/tests/smoke/home/homeSmoke.spec.ts` | Home page smoke tests |
+| `src/tests/smoke/navigation/navigationSmoke.spec.ts` | Navigation smoke tests |
+| `src/tests/smoke/pages/pageLoadSmoke.spec.ts` | Page load smoke tests |
+| `src/tests/smoke/privacy/cookieSmoke.spec.ts` | Cookie banner smoke tests |
+
+#### Usage
+
+1. Open `prompts/smoke-test-generation.prompt.md`.
+2. Fill in the **Variables** table at the bottom (`PLAN_FILE`, `TARGET_URL`, credentials, browser).
+3. Pass the completed prompt through the Playwright MCP server.
+4. The LLM will explore the site, build page objects, and generate all smoke specs.
+5. Review the HTML report: `npm run report`.
+
+---
 
 ## Template Blueprint File
 
