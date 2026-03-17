@@ -1,0 +1,31 @@
+name: PR Smoke Check
+
+on:
+  pull_request:
+    branches: [master, develop]
+
+jobs:
+  smoke-check:
+    name: Smoke Tests (PR Gate)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: mkdir -p src/config && touch src/config/.env.qa
+      - name: Run smoke tests
+        run: npx playwright test src/tests/smoke --project=chromium
+        env:
+          CI: true
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-smoke-report-${{ github.event.pull_request.number }}
+          path: playwright-report/
+          retention-days: 14
