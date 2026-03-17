@@ -1,0 +1,41 @@
+{
+  "name": "enterprise-playwright-dr-horton",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Playwright test automation framework for D.R. Horton",
+  "scripts": {
+    "test": "npx playwright test",
+    "ui": "npx playwright test --ui",
+    "list": "npx playwright test --list",
+    "headed": "npx playwright test --headed",
+    "debug": "npx playwright test --debug",
+    "chr": "npx playwright test --project=chromium",
+    "ff": "npx playwright test --project=firefox",
+    "wk": "npx playwright test --project=webkit",
+    "dash": "npx playwright test src/tests/regression/dashboard/dashboard.*.regression.spec.ts",
+    "reg:dashboard": "npx playwright test src/tests/regression/dashboard/dashboard.*.regression.spec.ts",
+    "smoke": "npx playwright test src/tests/smoke",
+    "smoke:dashboard": "npx playwright test src/tests/smoke/dashboard/dashboardSmoke.spec.ts",
+    "smoke:login": "npx playwright test src/tests/smoke/login/loginSmoke.spec.ts",
+    "reg:smoke": "npx playwright test src/tests/regression --grep @smoke",
+    "e2e:dashboard": "npx playwright test src/tests/e2e/dashboard/dashboardE2E.spec.ts",
+    "e2e:login": "npx playwright test src/tests/e2e/login/loginE2E.spec.ts",
+    "e2e:critical": "npx playwright test src/tests/e2e --grep @critical",
+    "login": "npx playwright test src/tests/regression/login/login.*.regression.spec.ts",
+    "last": "npx playwright test --last-failed",
+    "report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.2.0",
+    "@playwright/test": "^1.57.0",
+    "@types/crypto-js": "^4.2.2",
+    "@types/node": "^25.0.3",
+    "csv-writer": "^1.6.0"
+  },
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "dotenv": "^17.2.3",
+    "moment-timezone": "^0.6.0",
+    "winston": "^3.19.0"
+  }
+}
