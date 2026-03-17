@@ -453,6 +453,50 @@ This is the **follow-up prompt** referenced above. After the test plan is approv
 
 ---
 
+## Branching Strategy
+
+This repo uses a three-tier branching model. All changes flow through pull requests.
+
+```
+master              ← stable / production-ready
+  ↑ PR only
+develop             ← integration branch
+  ↑ PR only
+feature/* | bugfix/* ← working branches
+```
+
+### Branch Naming
+
+| Prefix | Use |
+|--------|-----|
+| `feature/<short-name>` | New tests, page objects, or framework features |
+| `bugfix/<short-name>` | Fixing a broken test or flaky selector |
+
+### Workflow
+
+1. **Create a branch** from `develop`:
+   ```bash
+   git checkout develop && git pull
+   git checkout -b feature/add-search-tests
+   ```
+2. **Make changes**, commit, and push:
+   ```bash
+   git push -u origin feature/add-search-tests
+   ```
+3. **Open a PR** targeting `develop`. The **PR Smoke Check** workflow runs automatically — smoke tests must pass before merging.
+4. **Merge to develop** via the PR.
+5. When `develop` is stable, **open a PR from `develop` → `master`** to promote.
+
+### CI on Pull Requests
+
+The `.github/workflows/pr-check.yml` workflow runs on every PR to `master` or `develop`:
+
+- Installs dependencies and Chromium
+- Runs all smoke tests
+- Uploads the HTML report as a PR artifact
+
+---
+
 ## Template Blueprint File
 
 Detailed framework blueprint is also available one level up:
