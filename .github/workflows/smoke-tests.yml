@@ -1,4 +1,4 @@
-name: Smoke Tests
+name: Playwright Tests
 
 on:
   schedule:
@@ -6,6 +6,16 @@ on:
     - cron: '0 7 * * *'
   workflow_dispatch:
     inputs:
+      suite:
+        description: 'Test suite to run'
+        required: false
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - smoke
+          - regression
+          - e2e
       browser:
         description: 'Browser to test on'
         required: false
@@ -19,34 +29,22 @@ on:
 
 jobs:
   smoke:
-    name: Smoke Tests (${{ github.event.inputs.browser || 'chromium' }})
+    name: Smoke Tests (${{ inputs.browser || 'chromium' }})
+    if: inputs.suite == 'all' || inputs.suite == 'smoke' || github.event_name == 'schedule'
     runs-on: ubuntu-latest
     timeout-minutes: 15
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps ${{ github.event.inputs.browser != 'all' && github.event.inputs.browser || 'chromium' }}
-
-      - name: Create env file
-        run: |
-          mkdir -p src/config
-          touch src/config/.env.qa
-
+      - run: npm ci
+      - run: npx playwright install --with-deps ${{ inputs.browser != 'all' && inputs.browser || 'chromium' }}
+      - run: mkdir -p src/config && touch src/config/.env.qa
       - name: Run smoke tests
         run: |
-          BROWSER="${{ github.event.inputs.browser || 'chromium' }}"
+          BROWSER="${{ inputs.browser || 'chromium' }}"
           if [ "$BROWSER" = "all" ]; then
             npx playwright test src/tests/smoke
           else
@@ -54,19 +52,95 @@ jobs:
           fi
         env:
           CI: true
-
-      - name: Upload HTML report
+      - name: Upload report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: smoke-report-${{ github.event.inputs.browser || 'chromium' }}-${{ github.run_number }}
+          name: smoke-report-${{ inputs.browser || 'chromium' }}-${{ github.run_number }}
           path: playwright-report/
           retention-days: 30
-
       - name: Upload test results
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: test-results-${{ github.run_number }}
+          name: smoke-test-results-${{ github.run_number }}
+          path: test-results/
+          retention-days: 7
+
+  regression:
+    name: Regression Tests (${{ inputs.browser || 'chromium' }})
+    if: inputs.suite == 'all' || inputs.suite == 'regression' || github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps ${{ inputs.browser != 'all' && inputs.browser || 'chromium' }}
+      - run: mkdir -p src/config && touch src/config/.env.qa
+      - name: Run regression tests
+        run: |
+          BROWSER="${{ inputs.browser || 'chromium' }}"
+          if [ "$BROWSER" = "all" ]; then
+            npx playwright test src/tests/regression
+          else
+            npx playwright test src/tests/regression --project="$BROWSER"
+          fi
+        env:
+          CI: true
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: regression-report-${{ inputs.browser || 'chromium' }}-${{ github.run_number }}
+          path: playwright-report/
+          retention-days: 30
+      - name: Upload test results
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: regression-test-results-${{ github.run_number }}
+          path: test-results/
+          retention-days: 7
+
+  e2e:
+    name: E2E Tests (${{ inputs.browser || 'chromium' }})
+    if: inputs.suite == 'all' || inputs.suite == 'e2e' || github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps ${{ inputs.browser != 'all' && inputs.browser || 'chromium' }}
+      - run: mkdir -p src/config && touch src/config/.env.qa
+      - name: Run E2E tests
+        run: |
+          BROWSER="${{ inputs.browser || 'chromium' }}"
+          if [ "$BROWSER" = "all" ]; then
+            npx playwright test src/tests/e2e
+          else
+            npx playwright test src/tests/e2e --project="$BROWSER"
+          fi
+        env:
+          CI: true
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-report-${{ inputs.browser || 'chromium' }}-${{ github.run_number }}
+          path: playwright-report/
+          retention-days: 30
+      - name: Upload test results
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-test-results-${{ github.run_number }}
           path: test-results/
           retention-days: 7
