@@ -1,18 +1,23 @@
 import { test, expect } from '../../fixtures';
+import { LoggerUtil } from '../../../utils/LoggerUtil';
 
 test.describe('Page Load Smoke Tests', () => {
   test('SMK-004: Who We Are page loads', { tag: ['@smoke'] }, async ({ pm, page }) => {
     await test.step('Navigate to /who-we-are', async () => {
+      LoggerUtil.info('Navigating to /who-we-are');
       await pm.whoWeArePage.open();
       await pm.whoWeArePage.dismissCookieBanner();
     });
     await test.step('Verify page title', async () => {
+      LoggerUtil.info('Verifying page title for Who We Are');
       await expect(page).toHaveTitle(/Who We Are.*D\.R\. Horton/i);
     });
     await test.step('Verify h1 heading is visible', async () => {
+      LoggerUtil.info('Verifying h1 heading visibility for Who We Are');
       await expect(pm.whoWeArePage.heading).toBeVisible();
     });
     await test.step('Attach screenshot', async () => {
+      LoggerUtil.info('Attaching screenshot for Who We Are page');
       await test.info().attach('who-we-are-page', {
         body: await page.screenshot(),
         contentType: 'image/png',
@@ -22,16 +27,20 @@ test.describe('Page Load Smoke Tests', () => {
 
   test('SMK-005: Smart Home page loads', { tag: ['@smoke'] }, async ({ pm, page }) => {
     await test.step('Navigate to /smart-home', async () => {
+      LoggerUtil.info('Navigating to /smart-home');
       await pm.smartHomePage.open();
       await pm.smartHomePage.dismissCookieBanner();
     });
     await test.step('Verify page title', async () => {
+      LoggerUtil.info('Verifying page title for Smart Home');
       await expect(page).toHaveTitle(/Smart Home.*D\.R\. Horton/i);
     });
     await test.step('Verify h1 heading is visible', async () => {
+      LoggerUtil.info('Verifying h1 heading visibility for Smart Home');
       await expect(pm.smartHomePage.heading).toBeVisible();
     });
     await test.step('Attach screenshot', async () => {
+      LoggerUtil.info('Attaching screenshot for Smart Home page');
       await test.info().attach('smart-home-page', {
         body: await page.screenshot(),
         contentType: 'image/png',

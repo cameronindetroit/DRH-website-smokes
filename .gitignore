@@ -7,6 +7,7 @@ tmp/
 
 # Environment files
 src/config/.env.*
+.env*
 
 # Prompts (contain internal workflow instructions)
 prompts/

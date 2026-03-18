@@ -1,0 +1,176 @@
+{"level":"info","message":"Dashboard smoke test placeholder executed","timestamp":"2026-03-18T17:56:42.166Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:56:44.200Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-18T17:56:44.437Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:56:44.435Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:56:44.437Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:56:44.440Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:56:44.523Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:56:44.608Z"}
+{"level":"info","message":"Verifying community search combobox visibility and placeholder","timestamp":"2026-03-18T17:56:50.222Z"}
+{"level":"info","message":"Attaching screenshot for community search","timestamp":"2026-03-18T17:56:50.266Z"}
+{"level":"info","message":"Clicking navigation link: Who we are","timestamp":"2026-03-18T17:56:50.596Z"}
+{"level":"info","message":"Verifying home page title","timestamp":"2026-03-18T17:56:50.959Z"}
+{"level":"info","message":"Verifying hero heading visibility","timestamp":"2026-03-18T17:56:50.976Z"}
+{"level":"info","message":"Attaching screenshot for home page loaded","timestamp":"2026-03-18T17:56:51.003Z"}
+{"level":"info","message":"Verifying skip to main content link href","timestamp":"2026-03-18T17:56:51.075Z"}
+{"level":"info","message":"Attaching screenshot for skip to main link","timestamp":"2026-03-18T17:56:51.214Z"}
+{"level":"info","message":"Verifying logo link visibility","timestamp":"2026-03-18T17:56:51.845Z"}
+{"level":"info","message":"Scrolling to footer","timestamp":"2026-03-18T17:56:51.952Z"}
+{"level":"info","message":"Verifying logo image visibility and alt text","timestamp":"2026-03-18T17:56:52.017Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-18T17:56:52.079Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Who We Are","timestamp":"2026-03-18T17:56:52.095Z"}
+{"level":"info","message":"Attaching screenshot for Who We Are page","timestamp":"2026-03-18T17:56:52.109Z"}
+{"level":"info","message":"Attaching screenshot for logo rendered","timestamp":"2026-03-18T17:56:52.142Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-18T17:56:52.629Z"}
+{"level":"info","message":"Verifying footer navigation visibility","timestamp":"2026-03-18T17:56:52.667Z"}
+{"level":"info","message":"Verifying footer copyright text visibility","timestamp":"2026-03-18T17:56:52.687Z"}
+{"level":"info","message":"Attaching screenshot for footer rendered","timestamp":"2026-03-18T17:56:52.709Z"}
+{"level":"info","message":"Verifying page title for Who we are","timestamp":"2026-03-18T17:56:52.722Z"}
+{"level":"info","message":"Verifying no 404 for Who we are","timestamp":"2026-03-18T17:56:53.504Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Who we are","timestamp":"2026-03-18T17:56:53.827Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-18T17:56:55.475Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-18T17:56:58.462Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Smart Home","timestamp":"2026-03-18T17:56:58.474Z"}
+{"level":"info","message":"Attaching screenshot for Smart Home page","timestamp":"2026-03-18T17:56:58.489Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-18T17:56:59.160Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-18T17:56:59.167Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-18T17:56:59.587Z"}
+{"level":"info","message":"Clicking navigation link: Smart home","timestamp":"2026-03-18T17:57:00.948Z"}
+{"level":"info","message":"Verifying page title for Smart home","timestamp":"2026-03-18T17:57:00.995Z"}
+{"level":"info","message":"Verifying no 404 for Smart home","timestamp":"2026-03-18T17:57:01.842Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-18T17:57:02.018Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Smart home","timestamp":"2026-03-18T17:57:02.123Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-18T17:57:02.212Z"}
+{"level":"info","message":"Attaching screenshot of cookie banner visible","timestamp":"2026-03-18T17:57:02.377Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-18T17:57:02.539Z"}
+{"level":"info","message":"Clicking dismiss/close button on cookie banner","timestamp":"2026-03-18T17:57:02.696Z"}
+{"level":"info","message":"Verifying cookie banner is hidden","timestamp":"2026-03-18T17:57:03.881Z"}
+{"level":"info","message":"Attaching screenshot after cookie banner dismiss","timestamp":"2026-03-18T17:57:04.274Z"}
+{"level":"info","message":"Clicking navigation link: Services","timestamp":"2026-03-18T17:57:06.887Z"}
+{"level":"info","message":"Verifying page title for Services","timestamp":"2026-03-18T17:57:06.918Z"}
+{"level":"info","message":"Verifying no 404 for Services","timestamp":"2026-03-18T17:57:07.197Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Services","timestamp":"2026-03-18T17:57:07.255Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-18T17:57:07.707Z"}
+{"level":"info","message":"Clicking navigation link: Customer care","timestamp":"2026-03-18T17:57:11.467Z"}
+{"level":"info","message":"Verifying page title for Customer care","timestamp":"2026-03-18T17:57:11.498Z"}
+{"level":"info","message":"Verifying no 404 for Customer care","timestamp":"2026-03-18T17:57:11.766Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Customer care","timestamp":"2026-03-18T17:57:11.836Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-18T17:57:12.055Z"}
+{"level":"info","message":"Dashboard smoke test placeholder executed","timestamp":"2026-03-18T17:57:36.546Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-18T17:57:37.833Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:57:37.830Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:57:37.871Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:57:37.878Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:57:37.925Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:57:37.939Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:57:37.952Z"}
+{"level":"info","message":"Verifying home page title","timestamp":"2026-03-18T17:57:44.309Z"}
+{"level":"info","message":"Verifying community search combobox visibility and placeholder","timestamp":"2026-03-18T17:57:44.323Z"}
+{"level":"info","message":"Attaching screenshot for community search","timestamp":"2026-03-18T17:57:44.362Z"}
+{"level":"info","message":"Verifying hero heading visibility","timestamp":"2026-03-18T17:57:44.370Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-18T17:57:44.386Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Who We Are","timestamp":"2026-03-18T17:57:44.413Z"}
+{"level":"info","message":"Attaching screenshot for Who We Are page","timestamp":"2026-03-18T17:57:44.462Z"}
+{"level":"info","message":"Attaching screenshot for home page loaded","timestamp":"2026-03-18T17:57:44.466Z"}
+{"level":"info","message":"Verifying skip to main content link href","timestamp":"2026-03-18T17:57:44.550Z"}
+{"level":"info","message":"Clicking navigation link: Who we are","timestamp":"2026-03-18T17:57:44.557Z"}
+{"level":"info","message":"Scrolling to footer","timestamp":"2026-03-18T17:57:44.569Z"}
+{"level":"info","message":"Attaching screenshot for skip to main link","timestamp":"2026-03-18T17:57:44.592Z"}
+{"level":"info","message":"Verifying footer navigation visibility","timestamp":"2026-03-18T17:57:44.723Z"}
+{"level":"info","message":"Verifying logo link visibility","timestamp":"2026-03-18T17:57:44.793Z"}
+{"level":"info","message":"Verifying logo image visibility and alt text","timestamp":"2026-03-18T17:57:44.822Z"}
+{"level":"info","message":"Attaching screenshot for logo rendered","timestamp":"2026-03-18T17:57:44.841Z"}
+{"level":"info","message":"Verifying footer copyright text visibility","timestamp":"2026-03-18T17:57:44.876Z"}
+{"level":"info","message":"Attaching screenshot for footer rendered","timestamp":"2026-03-18T17:57:44.896Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-18T17:57:46.035Z"}
+{"level":"info","message":"Verifying page title for Who we are","timestamp":"2026-03-18T17:57:46.222Z"}
+{"level":"info","message":"Verifying no 404 for Who we are","timestamp":"2026-03-18T17:57:46.608Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Who we are","timestamp":"2026-03-18T17:57:47.027Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-18T17:57:49.131Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-18T17:57:52.059Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Smart Home","timestamp":"2026-03-18T17:57:52.069Z"}
+{"level":"info","message":"Attaching screenshot for Smart Home page","timestamp":"2026-03-18T17:57:52.079Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-18T17:57:52.919Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-18T17:57:52.924Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-18T17:57:53.133Z"}
+{"level":"info","message":"Clicking navigation link: Smart home","timestamp":"2026-03-18T17:57:54.860Z"}
+{"level":"info","message":"Verifying page title for Smart home","timestamp":"2026-03-18T17:57:55.546Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-18T17:57:55.748Z"}
+{"level":"info","message":"Attaching screenshot of cookie banner visible","timestamp":"2026-03-18T17:57:55.944Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-18T17:57:55.972Z"}
+{"level":"info","message":"Dashboard smoke test placeholder executed","timestamp":"2026-03-18T17:57:56.433Z"}
+{"level":"info","message":"Clicking dismiss/close button on cookie banner","timestamp":"2026-03-18T17:57:56.437Z"}
+{"level":"info","message":"Verifying no 404 for Smart home","timestamp":"2026-03-18T17:57:56.706Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Smart home","timestamp":"2026-03-18T17:57:56.761Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-18T17:57:58.056Z"}
+{"level":"info","message":"Verifying cookie banner is hidden","timestamp":"2026-03-18T17:57:58.396Z"}
+{"level":"info","message":"Attaching screenshot after cookie banner dismiss","timestamp":"2026-03-18T17:57:58.723Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:58:02.352Z"}
+{"level":"info","message":"Clicking navigation link: Services","timestamp":"2026-03-18T17:58:02.596Z"}
+{"level":"info","message":"Verifying page title for Services","timestamp":"2026-03-18T17:58:02.713Z"}
+{"level":"info","message":"Verifying no 404 for Services","timestamp":"2026-03-18T17:58:03.067Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Services","timestamp":"2026-03-18T17:58:03.315Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-18T17:58:04.026Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:58:04.538Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:58:06.704Z"}
+{"level":"info","message":"Verifying home page title","timestamp":"2026-03-18T17:58:07.758Z"}
+{"level":"info","message":"Verifying hero heading visibility","timestamp":"2026-03-18T17:58:07.826Z"}
+{"level":"info","message":"Attaching screenshot for home page loaded","timestamp":"2026-03-18T17:58:07.897Z"}
+{"level":"info","message":"Clicking navigation link: Customer care","timestamp":"2026-03-18T17:58:08.410Z"}
+{"level":"info","message":"Verifying page title for Customer care","timestamp":"2026-03-18T17:58:08.536Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:58:09.056Z"}
+{"level":"info","message":"Verifying no 404 for Customer care","timestamp":"2026-03-18T17:58:09.224Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Customer care","timestamp":"2026-03-18T17:58:09.355Z"}
+{"level":"info","message":"Verifying logo link visibility","timestamp":"2026-03-18T17:58:09.911Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-18T17:58:09.932Z"}
+{"level":"info","message":"Verifying logo image visibility and alt text","timestamp":"2026-03-18T17:58:10.391Z"}
+{"level":"info","message":"Attaching screenshot for logo rendered","timestamp":"2026-03-18T17:58:10.936Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:58:11.600Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-18T17:58:11.851Z"}
+{"level":"info","message":"Verifying community search combobox visibility and placeholder","timestamp":"2026-03-18T17:58:12.200Z"}
+{"level":"info","message":"Attaching screenshot for community search","timestamp":"2026-03-18T17:58:13.024Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-18T17:58:14.703Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:58:15.005Z"}
+{"level":"info","message":"Scrolling to footer","timestamp":"2026-03-18T17:58:15.204Z"}
+{"level":"info","message":"Verifying footer navigation visibility","timestamp":"2026-03-18T17:58:16.551Z"}
+{"level":"info","message":"Verifying footer copyright text visibility","timestamp":"2026-03-18T17:58:16.737Z"}
+{"level":"info","message":"Attaching screenshot for footer rendered","timestamp":"2026-03-18T17:58:17.024Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-18T17:58:18.571Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Who We Are","timestamp":"2026-03-18T17:58:18.593Z"}
+{"level":"info","message":"Attaching screenshot for Who We Are page","timestamp":"2026-03-18T17:58:18.636Z"}
+{"level":"info","message":"Verifying skip to main content link href","timestamp":"2026-03-18T17:58:18.773Z"}
+{"level":"info","message":"Attaching screenshot for skip to main link","timestamp":"2026-03-18T17:58:18.928Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-18T17:58:20.674Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Smart Home","timestamp":"2026-03-18T17:58:20.688Z"}
+{"level":"info","message":"Attaching screenshot for Smart Home page","timestamp":"2026-03-18T17:58:20.722Z"}
+{"level":"info","message":"Clicking navigation link: Who we are","timestamp":"2026-03-18T17:58:22.311Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-18T17:58:30.603Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-18T17:58:30.625Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-18T17:58:31.036Z"}
+{"level":"info","message":"Dashboard smoke test placeholder executed","timestamp":"2026-03-18T17:58:32.002Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-18T17:58:33.700Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-18T17:58:34.369Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:58:35.133Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:58:35.140Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:58:35.146Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:58:36.208Z"}
+{"level":"info","message":"Verifying logo link visibility","timestamp":"2026-03-18T17:58:38.573Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:58:38.571Z"}
+{"level":"info","message":"Verifying home page title","timestamp":"2026-03-18T17:58:38.575Z"}
+{"level":"info","message":"Verifying community search combobox visibility and placeholder","timestamp":"2026-03-18T17:58:38.673Z"}
+{"level":"info","message":"Scrolling to footer","timestamp":"2026-03-18T17:58:39.592Z"}
+{"level":"info","message":"Verifying skip to main content link href","timestamp":"2026-03-18T17:58:42.095Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-18T17:58:46.853Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-18T17:58:50.347Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-18T17:58:50.362Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-18T17:58:53.867Z"}
+{"level":"info","message":"Clicking navigation link: Who we are","timestamp":"2026-03-18T17:58:53.956Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-18T17:58:53.986Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-18T17:59:15.196Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-18T17:59:15.237Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-18T17:59:15.636Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-18T17:59:17.898Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-18T17:59:19.911Z"}
+{"level":"info","message":"Clicking dismiss/close button on cookie banner","timestamp":"2026-03-18T17:59:20.576Z"}
+{"level":"info","message":"Verifying cookie banner is hidden","timestamp":"2026-03-18T17:59:21.247Z"}
+{"level":"info","message":"Attaching screenshot after cookie banner dismiss","timestamp":"2026-03-18T17:59:22.284Z"}
