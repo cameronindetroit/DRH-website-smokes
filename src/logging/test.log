@@ -174,3 +174,188 @@
 {"level":"info","message":"Clicking dismiss/close button on cookie banner","timestamp":"2026-03-18T17:59:20.576Z"}
 {"level":"info","message":"Verifying cookie banner is hidden","timestamp":"2026-03-18T17:59:21.247Z"}
 {"level":"info","message":"Attaching screenshot after cookie banner dismiss","timestamp":"2026-03-18T17:59:22.284Z"}
+{"level":"info","message":"Dashboard smoke test placeholder executed","timestamp":"2026-03-19T16:10:51.878Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:10:53.493Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-19T16:10:53.497Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:10:53.494Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:10:53.495Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:10:53.496Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:10:53.558Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:10:53.572Z"}
+{"level":"info","message":"Clicking navigation link: Who we are","timestamp":"2026-03-19T16:10:59.838Z"}
+{"level":"info","message":"Verifying skip to main content link href","timestamp":"2026-03-19T16:10:59.971Z"}
+{"level":"info","message":"Attaching screenshot for skip to main link","timestamp":"2026-03-19T16:11:00.007Z"}
+{"level":"info","message":"Verifying community search combobox visibility and placeholder","timestamp":"2026-03-19T16:11:00.064Z"}
+{"level":"info","message":"Verifying logo link visibility","timestamp":"2026-03-19T16:11:00.075Z"}
+{"level":"info","message":"Attaching screenshot for community search","timestamp":"2026-03-19T16:11:00.152Z"}
+{"level":"info","message":"Verifying home page title","timestamp":"2026-03-19T16:11:00.168Z"}
+{"level":"info","message":"Verifying hero heading visibility","timestamp":"2026-03-19T16:11:00.188Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-19T16:11:00.188Z"}
+{"level":"info","message":"Attaching screenshot for home page loaded","timestamp":"2026-03-19T16:11:00.207Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Who We Are","timestamp":"2026-03-19T16:11:00.210Z"}
+{"level":"info","message":"Scrolling to footer","timestamp":"2026-03-19T16:11:00.225Z"}
+{"level":"info","message":"Attaching screenshot for Who We Are page","timestamp":"2026-03-19T16:11:00.254Z"}
+{"level":"info","message":"Verifying logo image visibility and alt text","timestamp":"2026-03-19T16:11:00.271Z"}
+{"level":"info","message":"Attaching screenshot for logo rendered","timestamp":"2026-03-19T16:11:00.416Z"}
+{"level":"info","message":"Verifying footer navigation visibility","timestamp":"2026-03-19T16:11:00.770Z"}
+{"level":"info","message":"Verifying footer copyright text visibility","timestamp":"2026-03-19T16:11:00.806Z"}
+{"level":"info","message":"Attaching screenshot for footer rendered","timestamp":"2026-03-19T16:11:00.821Z"}
+{"level":"info","message":"Verifying page title for Who we are","timestamp":"2026-03-19T16:11:01.365Z"}
+{"level":"info","message":"Verifying no 404 for Who we are","timestamp":"2026-03-19T16:11:01.720Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-19T16:11:01.878Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Who we are","timestamp":"2026-03-19T16:11:02.173Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T16:11:04.051Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-19T16:11:07.331Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Smart Home","timestamp":"2026-03-19T16:11:07.344Z"}
+{"level":"info","message":"Attaching screenshot for Smart Home page","timestamp":"2026-03-19T16:11:07.371Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-19T16:11:07.930Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-19T16:11:07.933Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-19T16:11:08.049Z"}
+{"level":"info","message":"Clicking navigation link: Smart home","timestamp":"2026-03-19T16:11:09.591Z"}
+{"level":"info","message":"Verifying page title for Smart home","timestamp":"2026-03-19T16:11:09.955Z"}
+{"level":"info","message":"Verifying no 404 for Smart home","timestamp":"2026-03-19T16:11:10.050Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-19T16:11:10.323Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Smart home","timestamp":"2026-03-19T16:11:10.512Z"}
+{"level":"info","message":"Attaching screenshot of cookie banner visible","timestamp":"2026-03-19T16:11:10.590Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-19T16:11:10.638Z"}
+{"level":"info","message":"Clicking dismiss/close button on cookie banner","timestamp":"2026-03-19T16:11:11.017Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T16:11:11.156Z"}
+{"level":"info","message":"Dashboard smoke test placeholder executed","timestamp":"2026-03-19T16:11:11.970Z"}
+{"level":"info","message":"Verifying cookie banner is hidden","timestamp":"2026-03-19T16:11:12.903Z"}
+{"level":"info","message":"Attaching screenshot after cookie banner dismiss","timestamp":"2026-03-19T16:11:13.369Z"}
+{"level":"info","message":"Clicking navigation link: Services","timestamp":"2026-03-19T16:11:16.199Z"}
+{"level":"info","message":"Verifying page title for Services","timestamp":"2026-03-19T16:11:16.506Z"}
+{"level":"info","message":"Verifying no 404 for Services","timestamp":"2026-03-19T16:11:16.586Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Services","timestamp":"2026-03-19T16:11:16.714Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:11:17.052Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T16:11:17.128Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:11:18.384Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:11:20.567Z"}
+{"level":"info","message":"Clicking navigation link: Customer care","timestamp":"2026-03-19T16:11:21.289Z"}
+{"level":"info","message":"Verifying page title for Customer care","timestamp":"2026-03-19T16:11:21.371Z"}
+{"level":"info","message":"Verifying logo link visibility","timestamp":"2026-03-19T16:11:21.856Z"}
+{"level":"info","message":"Verifying logo image visibility and alt text","timestamp":"2026-03-19T16:11:21.962Z"}
+{"level":"info","message":"Verifying no 404 for Customer care","timestamp":"2026-03-19T16:11:21.983Z"}
+{"level":"info","message":"Attaching screenshot for logo rendered","timestamp":"2026-03-19T16:11:22.005Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Customer care","timestamp":"2026-03-19T16:11:22.131Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T16:11:22.707Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:11:23.051Z"}
+{"level":"info","message":"Verifying home page title","timestamp":"2026-03-19T16:11:23.862Z"}
+{"level":"info","message":"Verifying hero heading visibility","timestamp":"2026-03-19T16:11:23.899Z"}
+{"level":"info","message":"Attaching screenshot for home page loaded","timestamp":"2026-03-19T16:11:24.016Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:11:24.468Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-19T16:11:24.866Z"}
+{"level":"info","message":"Verifying skip to main content link href","timestamp":"2026-03-19T16:11:25.750Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:11:25.966Z"}
+{"level":"info","message":"Attaching screenshot for skip to main link","timestamp":"2026-03-19T16:11:26.015Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-19T16:11:28.112Z"}
+{"level":"info","message":"Scrolling to footer","timestamp":"2026-03-19T16:11:28.856Z"}
+{"level":"info","message":"Verifying footer navigation visibility","timestamp":"2026-03-19T16:11:30.536Z"}
+{"level":"info","message":"Verifying footer copyright text visibility","timestamp":"2026-03-19T16:11:30.853Z"}
+{"level":"info","message":"Attaching screenshot for footer rendered","timestamp":"2026-03-19T16:11:31.072Z"}
+{"level":"info","message":"Verifying community search combobox visibility and placeholder","timestamp":"2026-03-19T16:11:31.147Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-19T16:11:31.193Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Who We Are","timestamp":"2026-03-19T16:11:31.226Z"}
+{"level":"info","message":"Attaching screenshot for Who We Are page","timestamp":"2026-03-19T16:11:31.262Z"}
+{"level":"info","message":"Attaching screenshot for community search","timestamp":"2026-03-19T16:11:31.386Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-19T16:11:34.089Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Smart Home","timestamp":"2026-03-19T16:11:34.104Z"}
+{"level":"info","message":"Attaching screenshot for Smart Home page","timestamp":"2026-03-19T16:11:34.136Z"}
+{"level":"info","message":"Clicking navigation link: Who we are","timestamp":"2026-03-19T16:11:34.343Z"}
+{"level":"info","message":"Verifying page title for Who we are","timestamp":"2026-03-19T16:11:34.680Z"}
+{"level":"error","message":"Error in navigation step for Who we are","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Who We Are.*D\\.R\\. Horton/i\u001b[39m\nReceived string:  \u001b[31m\"Access denied | www.drhorton.com used Cloudflare to restrict access | www.drhorton.com | Cloudflare\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    8 × unexpected value \"Access denied | www.drhorton.com used Cloudflare to restrict access | www.drhorton.com | Cloudflare\"\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/navigation/navigationSmoke.spec.ts:33:30\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/navigation/navigationSmoke.spec.ts:28:7","timestamp":"2026-03-19T16:11:39.693Z"}
+{"level":"info","message":"Dashboard smoke test placeholder executed","timestamp":"2026-03-19T16:11:43.969Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-19T16:11:44.350Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-19T16:11:44.392Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-19T16:11:45.442Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-19T16:11:45.886Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-19T16:11:46.456Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:11:46.806Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:11:46.804Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:11:47.122Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:11:48.226Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:11:48.638Z"}
+{"level":"info","message":"Verifying home page title","timestamp":"2026-03-19T16:11:50.154Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:11:50.262Z"}
+{"level":"info","message":"Verifying community search combobox visibility and placeholder","timestamp":"2026-03-19T16:11:50.276Z"}
+{"level":"info","message":"Verifying logo link visibility","timestamp":"2026-03-19T16:11:50.437Z"}
+{"level":"info","message":"Scrolling to footer","timestamp":"2026-03-19T16:11:51.566Z"}
+{"level":"info","message":"Verifying skip to main content link href","timestamp":"2026-03-19T16:11:51.971Z"}
+{"level":"error","message":"Error verifying home page title","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/D\\.R\\. Horton America.*Largest Home Builder/i\u001b[39m\nReceived string:  \u001b[31m\"Access denied | www.drhorton.com used Cloudflare to restrict access | www.drhorton.com | Cloudflare\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"Access denied | www.drhorton.com used Cloudflare to restrict access | www.drhorton.com | Cloudflare\"\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:24:28\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:21:16","timestamp":"2026-03-19T16:11:55.167Z"}
+{"level":"error","message":"Error verifying community search combobox visibility and placeholder","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('combobox', { name: 'Search by zip, city, state, or community' })\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('combobox', { name: 'Search by zip, city, state, or community' })\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:114:51\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:111:16","timestamp":"2026-03-19T16:11:55.283Z"}
+{"level":"error","message":"Error verifying logo link visibility","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: 'D R Horton logo, go to the home page' }).first()\nExpected: visible\nTimeout: 5000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'D R Horton logo, go to the home page' }).first()\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:69:48\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:66:16","timestamp":"2026-03-19T16:11:55.449Z"}
+{"level":"error","message":"Error verifying cookie banner visibility","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#onetrust-banner-sdk')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#onetrust-banner-sdk')\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/privacy/cookieSmoke.spec.ts:37:30\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/privacy/cookieSmoke.spec.ts:32:16","timestamp":"2026-03-19T16:11:55.461Z"}
+{"level":"error","message":"Error waiting for cookie banner to appear","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#onetrust-banner-sdk')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#onetrust-banner-sdk')\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/privacy/cookieSmoke.spec.ts:84:30\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/privacy/cookieSmoke.spec.ts:80:16","timestamp":"2026-03-19T16:11:56.475Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-19T16:11:59.106Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-19T16:11:59.112Z"}
+{"level":"info","message":"Clicking navigation link: Who we are","timestamp":"2026-03-19T16:12:02.249Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-19T16:12:02.429Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-19T16:12:02.508Z"}
+{"level":"error","message":"Error verifying page title for Who We Are","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Who We Are.*D\\.R\\. Horton/i\u001b[39m\nReceived string:  \u001b[31m\"Access denied | www.drhorton.com used Cloudflare to restrict access | www.drhorton.com | Cloudflare\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"Access denied | www.drhorton.com used Cloudflare to restrict access | www.drhorton.com | Cloudflare\"\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:23:28\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:20:16","timestamp":"2026-03-19T16:12:07.444Z"}
+{"level":"error","message":"Error verifying page title for Smart Home","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Smart Home.*D\\.R\\. Horton/i\u001b[39m\nReceived string:  \u001b[31m\"Access denied | www.drhorton.com used Cloudflare to restrict access | www.drhorton.com | Cloudflare\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    9 × unexpected value \"Access denied | www.drhorton.com used Cloudflare to restrict access | www.drhorton.com | Cloudflare\"\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:82:28\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:79:16","timestamp":"2026-03-19T16:12:07.517Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-19T16:12:13.787Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-19T16:12:13.820Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-19T16:12:14.026Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-19T16:12:14.118Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-19T16:12:14.315Z"}
+{"level":"error","message":"Error verifying cookie banner visibility","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#onetrust-banner-sdk')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#onetrust-banner-sdk')\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/privacy/cookieSmoke.spec.ts:37:30\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/privacy/cookieSmoke.spec.ts:32:16","timestamp":"2026-03-19T16:12:24.135Z"}
+{"level":"error","message":"Error waiting for cookie banner to appear","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#onetrust-banner-sdk')\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('#onetrust-banner-sdk')\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/privacy/cookieSmoke.spec.ts:84:30\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/privacy/cookieSmoke.spec.ts:80:16","timestamp":"2026-03-19T16:12:24.326Z"}
+{"level":"error","message":"Error in navigation step for Who we are","stack":"locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('navigation', { name: 'main' }).getByRole('link', { name: 'Who we are' })\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/navigation/navigationSmoke.spec.ts:31:43\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/navigation/navigationSmoke.spec.ts:28:18","timestamp":"2026-03-19T16:12:56.872Z"}
+{"level":"info","message":"Dashboard smoke test placeholder executed","timestamp":"2026-03-19T16:13:24.679Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-19T16:13:25.878Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:13:25.878Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:13:25.908Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:13:25.859Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:13:25.982Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:13:25.988Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T16:13:26.002Z"}
+{"level":"info","message":"Verifying skip to main content link href","timestamp":"2026-03-19T16:13:32.336Z"}
+{"level":"info","message":"Attaching screenshot for skip to main link","timestamp":"2026-03-19T16:13:32.364Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-19T16:13:32.381Z"}
+{"level":"info","message":"Verifying logo link visibility","timestamp":"2026-03-19T16:13:32.405Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Who We Are","timestamp":"2026-03-19T16:13:32.425Z"}
+{"level":"info","message":"Scrolling to footer","timestamp":"2026-03-19T16:13:32.457Z"}
+{"level":"info","message":"Verifying logo image visibility and alt text","timestamp":"2026-03-19T16:13:32.466Z"}
+{"level":"info","message":"Attaching screenshot for Who We Are page","timestamp":"2026-03-19T16:13:32.492Z"}
+{"level":"info","message":"Attaching screenshot for logo rendered","timestamp":"2026-03-19T16:13:32.508Z"}
+{"level":"info","message":"Clicking navigation link: Who we are","timestamp":"2026-03-19T16:13:32.555Z"}
+{"level":"info","message":"Verifying community search combobox visibility and placeholder","timestamp":"2026-03-19T16:13:32.569Z"}
+{"level":"info","message":"Attaching screenshot for community search","timestamp":"2026-03-19T16:13:32.599Z"}
+{"level":"info","message":"Verifying home page title","timestamp":"2026-03-19T16:13:32.604Z"}
+{"level":"info","message":"Verifying hero heading visibility","timestamp":"2026-03-19T16:13:32.624Z"}
+{"level":"info","message":"Attaching screenshot for home page loaded","timestamp":"2026-03-19T16:13:32.641Z"}
+{"level":"info","message":"Verifying footer navigation visibility","timestamp":"2026-03-19T16:13:32.789Z"}
+{"level":"info","message":"Verifying footer copyright text visibility","timestamp":"2026-03-19T16:13:32.820Z"}
+{"level":"info","message":"Attaching screenshot for footer rendered","timestamp":"2026-03-19T16:13:32.837Z"}
+{"level":"info","message":"Verifying page title for Who we are","timestamp":"2026-03-19T16:13:32.902Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-19T16:13:33.949Z"}
+{"level":"info","message":"Verifying no 404 for Who we are","timestamp":"2026-03-19T16:13:34.691Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Who we are","timestamp":"2026-03-19T16:13:35.350Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T16:13:36.096Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-19T16:13:39.513Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Smart Home","timestamp":"2026-03-19T16:13:39.517Z"}
+{"level":"info","message":"Attaching screenshot for Smart Home page","timestamp":"2026-03-19T16:13:39.525Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-19T16:13:40.216Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-19T16:13:40.221Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-19T16:13:40.583Z"}
+{"level":"info","message":"Clicking navigation link: Smart home","timestamp":"2026-03-19T16:13:41.768Z"}
+{"level":"info","message":"Verifying page title for Smart home","timestamp":"2026-03-19T16:13:41.848Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-19T16:13:41.972Z"}
+{"level":"info","message":"Verifying no 404 for Smart home","timestamp":"2026-03-19T16:13:42.170Z"}
+{"level":"info","message":"Attaching screenshot of cookie banner visible","timestamp":"2026-03-19T16:13:42.252Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-19T16:13:42.343Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Smart home","timestamp":"2026-03-19T16:13:42.424Z"}
+{"level":"info","message":"Clicking dismiss/close button on cookie banner","timestamp":"2026-03-19T16:13:42.505Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T16:13:42.903Z"}
+{"level":"info","message":"Verifying cookie banner is hidden","timestamp":"2026-03-19T16:13:44.097Z"}
+{"level":"info","message":"Attaching screenshot after cookie banner dismiss","timestamp":"2026-03-19T16:13:44.472Z"}
+{"level":"info","message":"Clicking navigation link: Services","timestamp":"2026-03-19T16:13:46.774Z"}
+{"level":"info","message":"Verifying page title for Services","timestamp":"2026-03-19T16:13:46.823Z"}
+{"level":"info","message":"Verifying no 404 for Services","timestamp":"2026-03-19T16:13:47.133Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Services","timestamp":"2026-03-19T16:13:47.187Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T16:13:47.531Z"}
+{"level":"info","message":"Clicking navigation link: Customer care","timestamp":"2026-03-19T16:13:51.114Z"}
+{"level":"info","message":"Verifying page title for Customer care","timestamp":"2026-03-19T16:13:51.133Z"}
+{"level":"info","message":"Verifying no 404 for Customer care","timestamp":"2026-03-19T16:13:51.401Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Customer care","timestamp":"2026-03-19T16:13:51.476Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T16:13:51.737Z"}
