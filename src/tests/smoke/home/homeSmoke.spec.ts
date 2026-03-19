@@ -1,3 +1,4 @@
+  
 import { test, expect } from '../../fixtures';
 import { LoggerUtil } from '../../../utils/LoggerUtil';
 
@@ -191,3 +192,65 @@ test.describe('Home Page Smoke Tests', () => {
     });
   });
 });
+
+test('SMK-020: Search input navigates to Texas map page', { tag: ['@smoke'] }, async ({ pm, page }) => {
+    // Troubleshooting: Only validate navigation to home page
+    LoggerUtil.info('Opening home page for Texas search input smoke test');
+    try {
+      await pm.homePage.open();
+      await expect(page).toHaveURL('https://www.drhorton.com/');
+    } catch (error) {
+      if (error instanceof Error) {
+        LoggerUtil.error('Error opening home page or validating URL', { stack: error.stack });
+      } else {
+        LoggerUtil.error('Error opening home page or validating URL', { error });
+      }
+      throw error;
+    }
+    await test.step('Enter "Texas" in search input', async () => {
+      LoggerUtil.info('Waiting for search input to be visible');
+      try {
+        await expect(pm.homePage.communitySearch).toBeVisible({ timeout: 10000 });
+        LoggerUtil.info('Entering "Texas" in home page search input');
+        await pm.homePage.communitySearch.fill('Texas');
+        const inputScreenshot = await pm.homePage.page.screenshot({ fullPage: false });
+        await test.info().attach('Search input filled', { body: inputScreenshot, contentType: 'image/png' });
+      } catch (error) {
+        if (error instanceof Error) {
+          LoggerUtil.error('Error entering "Texas" in search input', { stack: error.stack });
+        } else {
+          LoggerUtil.error('Error entering "Texas" in search input', { error });
+        }
+        throw error;
+      }
+    });
+    await test.step('Select Texas from dropdown and validate navigation', async () => {
+      LoggerUtil.info('Waiting for Texas dropdown option to be visible');
+      try {
+        const texasOption = pm.homePage.page.getByRole('link', { name: 'Texas' });
+        await expect(texasOption).toBeVisible({ timeout: 10000 });
+        // Trigger dropdown display by focusing or clicking the search input
+        await pm.homePage.communitySearch.focus();
+        await pm.homePage.communitySearch.press('ArrowDown');
+        // Wait for dropdown option to be visible before screenshot
+        await expect(texasOption).toBeVisible({ timeout: 5000 });
+        const dropdownScreenshot = await pm.homePage.page.screenshot({ fullPage: false });
+        await test.info().attach('Dropdown displayed', { body: dropdownScreenshot, contentType: 'image/png' });
+        LoggerUtil.info('Clicking Texas dropdown option');
+        await texasOption.click();
+        LoggerUtil.info('Waiting for navigation to Texas map page');
+        await pm.homePage.page.waitForURL('**/texas', { timeout: 10000 });
+        LoggerUtil.info('Navigation to Texas map page successful');
+        const texasMapScreenshot = await pm.homePage.page.screenshot({ fullPage: true });
+        await test.info().attach('Texas map page', { body: texasMapScreenshot, contentType: 'image/png' });
+        await expect(pm.homePage.page).toHaveURL(/texas/);
+      } catch (error) {
+        if (error instanceof Error) {
+          LoggerUtil.error('Error selecting Texas or validating navigation', { stack: error.stack });
+        } else {
+          LoggerUtil.error('Error selecting Texas or validating navigation', { error });
+        }
+        throw error;
+      }
+    });
+  });
