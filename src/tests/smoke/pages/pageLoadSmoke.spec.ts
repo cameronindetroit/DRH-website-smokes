@@ -5,46 +5,118 @@ test.describe('Page Load Smoke Tests', () => {
   test('SMK-004: Who We Are page loads', { tag: ['@smoke'] }, async ({ pm, page }) => {
     await test.step('Navigate to /who-we-are', async () => {
       LoggerUtil.info('Navigating to /who-we-are');
-      await pm.whoWeArePage.open();
-      await pm.whoWeArePage.dismissCookieBanner();
+      try {
+        await pm.whoWeArePage.open();
+        await pm.whoWeArePage.dismissCookieBanner();
+      } catch (error) {
+        if (error instanceof Error) {
+          LoggerUtil.error('Error navigating to /who-we-are', { stack: error.stack });
+        } else {
+          LoggerUtil.error('Error navigating to /who-we-are', { error });
+        }
+        throw error;
+      }
     });
     await test.step('Verify page title', async () => {
       LoggerUtil.info('Verifying page title for Who We Are');
-      await expect(page).toHaveTitle(/Who We Are.*D\.R\. Horton/i);
+      try {
+        await expect(page).toHaveTitle(/Who We Are.*D\.R\. Horton/i);
+      } catch (error) {
+        if (error instanceof Error) {
+          LoggerUtil.error('Error verifying page title for Who We Are', { stack: error.stack });
+        } else {
+          LoggerUtil.error('Error verifying page title for Who We Are', { error });
+        }
+        throw error;
+      }
     });
     await test.step('Verify h1 heading is visible', async () => {
       LoggerUtil.info('Verifying h1 heading visibility for Who We Are');
-      await expect(pm.whoWeArePage.heading).toBeVisible();
+      try {
+        await expect(pm.whoWeArePage.heading).toBeVisible();
+      } catch (error) {
+        if (error instanceof Error) {
+          LoggerUtil.error('Error verifying h1 heading visibility for Who We Are', { stack: error.stack });
+        } else {
+          LoggerUtil.error('Error verifying h1 heading visibility for Who We Are', { error });
+        }
+        throw error;
+      }
     });
     await test.step('Attach screenshot', async () => {
       LoggerUtil.info('Attaching screenshot for Who We Are page');
-      await test.info().attach('who-we-are-page', {
-        body: await page.screenshot(),
-        contentType: 'image/png',
-      });
+      try {
+        await test.info().attach('who-we-are-page', {
+          body: await page.screenshot(),
+          contentType: 'image/png',
+        });
+      } catch (error) {
+        if (error instanceof Error) {
+          LoggerUtil.error('Error attaching screenshot for Who We Are page', { stack: error.stack });
+        } else {
+          LoggerUtil.error('Error attaching screenshot for Who We Are page', { error });
+        }
+        throw error;
+      }
     });
   });
 
   test('SMK-005: Smart Home page loads', { tag: ['@smoke'] }, async ({ pm, page }) => {
     await test.step('Navigate to /smart-home', async () => {
       LoggerUtil.info('Navigating to /smart-home');
-      await pm.smartHomePage.open();
-      await pm.smartHomePage.dismissCookieBanner();
+      try {
+        await pm.smartHomePage.open();
+        await pm.smartHomePage.dismissCookieBanner();
+      } catch (error) {
+        if (error instanceof Error) {
+          LoggerUtil.error('Error navigating to /smart-home', { stack: error.stack });
+        } else {
+          LoggerUtil.error('Error navigating to /smart-home', { error });
+        }
+        throw error;
+      }
     });
     await test.step('Verify page title', async () => {
       LoggerUtil.info('Verifying page title for Smart Home');
-      await expect(page).toHaveTitle(/Smart Home.*D\.R\. Horton/i);
+      try {
+        await expect(page).toHaveTitle(/Smart Home.*D\.R\. Horton/i);
+      } catch (error) {
+        if (error instanceof Error) {
+          LoggerUtil.error('Error verifying page title for Smart Home', { stack: error.stack });
+        } else {
+          LoggerUtil.error('Error verifying page title for Smart Home', { error });
+        }
+        throw error;
+      }
     });
     await test.step('Verify h1 heading is visible', async () => {
       LoggerUtil.info('Verifying h1 heading visibility for Smart Home');
-      await expect(pm.smartHomePage.heading).toBeVisible();
+      try {
+        await expect(pm.smartHomePage.heading).toBeVisible();
+      } catch (error) {
+        if (error instanceof Error) {
+          LoggerUtil.error('Error verifying h1 heading visibility for Smart Home', { stack: error.stack });
+        } else {
+          LoggerUtil.error('Error verifying h1 heading visibility for Smart Home', { error });
+        }
+        throw error;
+      }
     });
     await test.step('Attach screenshot', async () => {
       LoggerUtil.info('Attaching screenshot for Smart Home page');
-      await test.info().attach('smart-home-page', {
-        body: await page.screenshot(),
-        contentType: 'image/png',
-      });
+      try {
+        await test.info().attach('smart-home-page', {
+          body: await page.screenshot(),
+          contentType: 'image/png',
+        });
+      } catch (error) {
+        if (error instanceof Error) {
+          LoggerUtil.error('Error attaching screenshot for Smart Home page', { stack: error.stack });
+        } else {
+          LoggerUtil.error('Error attaching screenshot for Smart Home page', { error });
+        }
+        throw error;
+      }
     });
   });
 
