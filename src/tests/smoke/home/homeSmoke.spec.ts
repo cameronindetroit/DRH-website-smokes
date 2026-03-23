@@ -254,3 +254,28 @@ test('SMK-020: Search input navigates to Texas map page', { tag: ['@smoke'] }, a
       }
     });
   });
+
+test('EDGE-404-REDIRECT: Non-existent path redirects to home', { tag: ['@edge'] }, async ({ pm, page }) => {
+  await test.step('Navigate to a non-existent path and assert redirect-to-home', async () => {
+    LoggerUtil.info('Navigating to a likely-nonexistent path to observe redirect behavior');
+    try {
+      const [resp] = await Promise.all([
+        page.waitForResponse((r) => (r.status() === 301 || r.status() === 302) && r.url().includes('/this-path-does-not-exist')),
+        page.goto('https://www.drhorton.com/this-path-does-not-exist', { waitUntil: 'domcontentloaded' }),
+      ]);
+
+      LoggerUtil.info('Asserting the site redirected the request');
+      expect([301, 302]).toContain(resp.status());
+      await expect(page).toHaveURL('https://www.drhorton.com/');
+      // Basic visible element sanity check for homepage using page model locator
+      await expect(pm.homePage.topBanner).toBeVisible();
+      await test.info().attach('redirected-home-screenshot', {
+        body: await page.screenshot(),
+        contentType: 'image/png',
+      });
+    } catch (error) {
+      LoggerUtil.error('Error asserting redirect-to-home behavior', { error });
+      throw error;
+    }
+  });
+});

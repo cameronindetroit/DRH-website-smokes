@@ -359,3 +359,199 @@
 {"level":"info","message":"Verifying no 404 for Customer care","timestamp":"2026-03-19T16:13:51.401Z"}
 {"level":"info","message":"Attaching screenshot for navigation: Customer care","timestamp":"2026-03-19T16:13:51.476Z"}
 {"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T16:13:51.737Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-19T17:11:40.802Z"}
+{"level":"error","message":"Error entering \"Texas\" in search input","stack":"locator.fill: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('combobox', { name: 'Search by zip, city, state, or community' })\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:5:43\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:2:16","timestamp":"2026-03-19T17:12:40.694Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-19T17:16:19.088Z"}
+{"level":"error","message":"Error entering \"Texas\" in search input","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('combobox', { name: 'Search by zip, city, state, or community' })\nExpected: visible\nTimeout: 10000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('combobox', { name: 'Search by zip, city, state, or community' })\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:5:51\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:2:16","timestamp":"2026-03-19T17:16:29.109Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-19T17:19:49.340Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-19T17:21:16.064Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-19T17:21:17.230Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-19T17:21:17.243Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-19T17:23:06.644Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-19T17:23:07.760Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-19T17:23:07.781Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-19T17:23:07.835Z"}
+{"level":"error","message":"Error selecting Texas or validating navigation","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('text=Texas')\nExpected: visible\nError: strict mode violation: locator('text=Texas') resolved to 2 elements:\n    1) <a href=\"/texas\" class=\"Texas\" aria-label=\"Texas\">Texas</a> aka getByRole('link', { name: 'Texas' })\n    2) <a aria-label=\"East-Texas\" href=\"/texas/east-texas\" class=\"market-footer-item Texas\">East Texas</a> aka getByLabel('East-Texas')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('text=Texas')\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:34:35\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:30:16","timestamp":"2026-03-19T17:23:07.865Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-19T17:23:23.280Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-19T17:23:24.347Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-19T17:23:24.391Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-19T17:23:24.452Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-19T17:23:24.465Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-19T17:23:24.875Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-19T17:23:26.003Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-19T17:24:47.126Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-19T17:24:48.235Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-19T17:24:48.250Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-19T17:24:48.589Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-19T17:24:48.864Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-19T17:24:49.336Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-19T17:24:52.425Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-19T17:26:01.562Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-19T17:26:02.971Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-19T17:26:03.015Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-19T17:26:03.295Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-19T17:26:03.530Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-19T17:26:05.810Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-19T17:26:07.219Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-19T17:26:51.357Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-19T17:26:52.655Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-19T17:26:52.671Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-19T17:26:52.951Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-19T17:26:53.168Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-19T17:26:53.630Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-19T17:26:54.963Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-19T17:27:58.624Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-19T17:27:59.808Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-19T17:27:59.831Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-19T17:28:00.084Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-19T17:28:00.404Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-19T17:28:00.839Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-19T17:28:02.206Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-19T17:28:58.607Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-19T17:28:59.709Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-19T17:28:59.757Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-19T17:29:00.031Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-19T17:29:00.526Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-19T17:29:00.965Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-19T17:29:02.078Z"}
+{"level":"info","message":"Dashboard smoke test placeholder executed","timestamp":"2026-03-19T17:29:35.261Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T17:29:36.770Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T17:29:36.772Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T17:29:36.772Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-19T17:29:36.772Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T17:29:36.770Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T17:29:36.771Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T17:29:36.772Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-19T17:29:40.812Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-19T17:29:40.846Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-19T17:29:42.740Z"}
+{"level":"info","message":"Verifying home page title","timestamp":"2026-03-19T17:29:43.393Z"}
+{"level":"info","message":"Verifying hero heading visibility","timestamp":"2026-03-19T17:29:43.407Z"}
+{"level":"info","message":"Attaching screenshot for home page loaded","timestamp":"2026-03-19T17:29:43.418Z"}
+{"level":"info","message":"Verifying community search combobox visibility and placeholder","timestamp":"2026-03-19T17:29:43.428Z"}
+{"level":"info","message":"Clicking navigation link: Who we are","timestamp":"2026-03-19T17:29:43.520Z"}
+{"level":"info","message":"Scrolling to footer","timestamp":"2026-03-19T17:29:43.567Z"}
+{"level":"info","message":"Verifying logo link visibility","timestamp":"2026-03-19T17:29:43.667Z"}
+{"level":"info","message":"Verifying skip to main content link href","timestamp":"2026-03-19T17:29:43.679Z"}
+{"level":"info","message":"Verifying footer navigation visibility","timestamp":"2026-03-19T17:29:43.690Z"}
+{"level":"info","message":"Verifying logo image visibility and alt text","timestamp":"2026-03-19T17:29:43.703Z"}
+{"level":"info","message":"Attaching screenshot for skip to main link","timestamp":"2026-03-19T17:29:43.707Z"}
+{"level":"info","message":"Verifying footer copyright text visibility","timestamp":"2026-03-19T17:29:43.710Z"}
+{"level":"info","message":"Attaching screenshot for logo rendered","timestamp":"2026-03-19T17:29:43.713Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-19T17:29:43.777Z"}
+{"level":"info","message":"Attaching screenshot for community search","timestamp":"2026-03-19T17:29:43.827Z"}
+{"level":"info","message":"Attaching screenshot for footer rendered","timestamp":"2026-03-19T17:29:43.829Z"}
+{"level":"info","message":"Verifying page title for Who we are","timestamp":"2026-03-19T17:29:45.025Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-19T17:29:45.359Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-19T17:29:45.385Z"}
+{"level":"info","message":"Verifying no 404 for Who we are","timestamp":"2026-03-19T17:29:45.655Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-19T17:29:45.965Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Who we are","timestamp":"2026-03-19T17:29:46.030Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T17:29:48.203Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-19T17:29:51.328Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-19T17:29:51.540Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Who We Are","timestamp":"2026-03-19T17:29:51.545Z"}
+{"level":"info","message":"Attaching screenshot for Who We Are page","timestamp":"2026-03-19T17:29:51.552Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-19T17:29:51.835Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Smart Home","timestamp":"2026-03-19T17:29:51.868Z"}
+{"level":"info","message":"Attaching screenshot for Smart Home page","timestamp":"2026-03-19T17:29:51.890Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-19T17:29:52.834Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-19T17:29:52.841Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-19T17:29:53.236Z"}
+{"level":"info","message":"Clicking navigation link: Smart home","timestamp":"2026-03-19T17:29:53.450Z"}
+{"level":"info","message":"Verifying page title for Smart home","timestamp":"2026-03-19T17:29:53.541Z"}
+{"level":"info","message":"Verifying no 404 for Smart home","timestamp":"2026-03-19T17:29:53.858Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Smart home","timestamp":"2026-03-19T17:29:54.112Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T17:29:55.226Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-19T17:29:55.652Z"}
+{"level":"info","message":"Attaching screenshot of cookie banner visible","timestamp":"2026-03-19T17:29:55.940Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-19T17:29:56.150Z"}
+{"level":"info","message":"Clicking dismiss/close button on cookie banner","timestamp":"2026-03-19T17:29:56.512Z"}
+{"level":"info","message":"Verifying cookie banner is hidden","timestamp":"2026-03-19T17:29:57.717Z"}
+{"level":"info","message":"Attaching screenshot after cookie banner dismiss","timestamp":"2026-03-19T17:29:58.140Z"}
+{"level":"info","message":"Clicking navigation link: Services","timestamp":"2026-03-19T17:30:00.004Z"}
+{"level":"info","message":"Verifying page title for Services","timestamp":"2026-03-19T17:30:00.058Z"}
+{"level":"info","message":"Verifying no 404 for Services","timestamp":"2026-03-19T17:30:00.337Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Services","timestamp":"2026-03-19T17:30:00.396Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T17:30:00.775Z"}
+{"level":"info","message":"Clicking navigation link: Customer care","timestamp":"2026-03-19T17:30:04.365Z"}
+{"level":"info","message":"Verifying page title for Customer care","timestamp":"2026-03-19T17:30:04.406Z"}
+{"level":"info","message":"Verifying no 404 for Customer care","timestamp":"2026-03-19T17:30:04.691Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Customer care","timestamp":"2026-03-19T17:30:04.764Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T17:30:04.993Z"}
+{"level":"info","message":"Dashboard smoke test placeholder executed","timestamp":"2026-03-19T17:32:33.477Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T17:32:34.723Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T17:32:34.735Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T17:32:34.774Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T17:32:34.763Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T17:32:34.796Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-19T17:32:34.830Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-19T17:32:34.831Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-19T17:32:38.563Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-19T17:32:38.923Z"}
+{"level":"info","message":"Verifying community search combobox visibility and placeholder","timestamp":"2026-03-19T17:32:41.098Z"}
+{"level":"info","message":"Scrolling to footer","timestamp":"2026-03-19T17:32:41.265Z"}
+{"level":"info","message":"Verifying home page title","timestamp":"2026-03-19T17:32:41.286Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-19T17:32:41.364Z"}
+{"level":"info","message":"Clicking navigation link: Who we are","timestamp":"2026-03-19T17:32:41.408Z"}
+{"level":"info","message":"Verifying skip to main content link href","timestamp":"2026-03-19T17:32:41.466Z"}
+{"level":"info","message":"Verifying logo link visibility","timestamp":"2026-03-19T17:32:41.537Z"}
+{"level":"info","message":"Verifying logo image visibility and alt text","timestamp":"2026-03-19T17:32:41.595Z"}
+{"level":"info","message":"Attaching screenshot for community search","timestamp":"2026-03-19T17:32:41.605Z"}
+{"level":"info","message":"Attaching screenshot for logo rendered","timestamp":"2026-03-19T17:32:41.606Z"}
+{"level":"info","message":"Verifying hero heading visibility","timestamp":"2026-03-19T17:32:41.752Z"}
+{"level":"info","message":"Attaching screenshot for home page loaded","timestamp":"2026-03-19T17:32:41.824Z"}
+{"level":"info","message":"Attaching screenshot for skip to main link","timestamp":"2026-03-19T17:32:41.825Z"}
+{"level":"info","message":"Verifying footer navigation visibility","timestamp":"2026-03-19T17:32:41.995Z"}
+{"level":"info","message":"Verifying footer copyright text visibility","timestamp":"2026-03-19T17:32:42.027Z"}
+{"level":"info","message":"Attaching screenshot for footer rendered","timestamp":"2026-03-19T17:32:42.163Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-19T17:32:42.438Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-19T17:32:43.527Z"}
+{"level":"info","message":"Verifying page title for Who we are","timestamp":"2026-03-19T17:32:43.596Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-19T17:32:43.615Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-19T17:32:43.931Z"}
+{"level":"info","message":"Verifying no 404 for Who we are","timestamp":"2026-03-19T17:32:44.409Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Who we are","timestamp":"2026-03-19T17:32:44.607Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T17:32:46.358Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-19T17:32:49.515Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Smart Home","timestamp":"2026-03-19T17:32:49.523Z"}
+{"level":"info","message":"Attaching screenshot for Smart Home page","timestamp":"2026-03-19T17:32:49.542Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-19T17:32:49.744Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Who We Are","timestamp":"2026-03-19T17:32:49.756Z"}
+{"level":"info","message":"Attaching screenshot for Who We Are page","timestamp":"2026-03-19T17:32:49.772Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-19T17:32:50.090Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-19T17:32:51.111Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-19T17:32:51.121Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-19T17:32:51.302Z"}
+{"level":"info","message":"Clicking navigation link: Smart home","timestamp":"2026-03-19T17:32:51.709Z"}
+{"level":"info","message":"Verifying page title for Smart home","timestamp":"2026-03-19T17:32:51.770Z"}
+{"level":"info","message":"Verifying no 404 for Smart home","timestamp":"2026-03-19T17:32:52.717Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Smart home","timestamp":"2026-03-19T17:32:52.909Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T17:32:53.923Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-19T17:32:54.184Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-19T17:32:54.268Z"}
+{"level":"info","message":"Attaching screenshot of cookie banner visible","timestamp":"2026-03-19T17:32:54.787Z"}
+{"level":"info","message":"Clicking dismiss/close button on cookie banner","timestamp":"2026-03-19T17:32:54.971Z"}
+{"level":"info","message":"Verifying cookie banner is hidden","timestamp":"2026-03-19T17:32:56.987Z"}
+{"level":"info","message":"Attaching screenshot after cookie banner dismiss","timestamp":"2026-03-19T17:32:57.487Z"}
+{"level":"info","message":"Clicking navigation link: Services","timestamp":"2026-03-19T17:32:58.815Z"}
+{"level":"info","message":"Verifying page title for Services","timestamp":"2026-03-19T17:32:58.853Z"}
+{"level":"info","message":"Verifying no 404 for Services","timestamp":"2026-03-19T17:32:59.159Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Services","timestamp":"2026-03-19T17:32:59.271Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T17:32:59.727Z"}
+{"level":"info","message":"Clicking navigation link: Customer care","timestamp":"2026-03-19T17:33:03.454Z"}
+{"level":"info","message":"Verifying page title for Customer care","timestamp":"2026-03-19T17:33:03.500Z"}
+{"level":"info","message":"Verifying no 404 for Customer care","timestamp":"2026-03-19T17:33:03.786Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Customer care","timestamp":"2026-03-19T17:33:03.847Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-19T17:33:04.046Z"}
+{"level":"info","message":"Setting up route to simulate a 404 for a specific path","timestamp":"2026-03-22T19:18:26.987Z"}
+{"level":"info","message":"Navigating to the simulated 404 path","timestamp":"2026-03-22T19:18:26.996Z"}
+{"level":"info","message":"Asserting the intercepted response status is 404","timestamp":"2026-03-22T19:18:27.039Z"}
+{"level":"info","message":"Navigating to a likely-nonexistent path to observe redirect behavior","timestamp":"2026-03-23T17:57:59.770Z"}
+{"level":"info","message":"Asserting the site redirected the request","timestamp":"2026-03-23T17:58:00.591Z"}
+{"error":{"matcherResult":{"expected":"visible","log":["  - Expect \"toBeVisible\" with timeout 5000ms","  - waiting for getByRole('banner')"],"message":"\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('banner')\nExpected: visible\nError: strict mode violation: getByRole('banner') resolved to 2 elements:\n    1) <button role=\"banner\" class=\"site-alert\" data-link=\"/new-homes-now-ready\">…</button> aka getByRole('banner').filter({ hasText: 'New homes. Now ready.SM |' })\n    2) <header role=\"banner\" class=\"site-header\">…</header> aka locator('header')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('banner')\u001b[22m\n","name":"toBeVisible","pass":false},"name":"Error"},"level":"error","message":"Error asserting redirect-to-home behavior","timestamp":"2026-03-23T17:58:00.734Z"}
+{"level":"info","message":"Navigating to a likely-nonexistent path to observe redirect behavior","timestamp":"2026-03-23T18:02:53.595Z"}
+{"level":"info","message":"Asserting the site redirected the request","timestamp":"2026-03-23T18:02:54.283Z"}
+{"error":{"matcherResult":{"expected":"visible","log":["  - Expect \"toBeVisible\" with timeout 5000ms","  - waiting for getByRole('banner')"],"message":"\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('banner')\nExpected: visible\nError: strict mode violation: getByRole('banner') resolved to 2 elements:\n    1) <button role=\"banner\" class=\"site-alert\" data-link=\"/new-homes-now-ready\">…</button> aka getByRole('banner').filter({ hasText: 'New homes. Now ready.SM |' })\n    2) <header role=\"banner\" class=\"site-header\">…</header> aka locator('header')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('banner')\u001b[22m\n","name":"toBeVisible","pass":false},"name":"Error"},"level":"error","message":"Error asserting redirect-to-home behavior","timestamp":"2026-03-23T18:02:54.509Z"}
+{"level":"info","message":"Navigating to a likely-nonexistent path to observe redirect behavior","timestamp":"2026-03-23T18:10:26.971Z"}
+{"level":"info","message":"Asserting the site redirected the request","timestamp":"2026-03-23T18:10:27.743Z"}
