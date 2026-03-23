@@ -555,3 +555,177 @@
 {"error":{"matcherResult":{"expected":"visible","log":["  - Expect \"toBeVisible\" with timeout 5000ms","  - waiting for getByRole('banner')"],"message":"\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('banner')\nExpected: visible\nError: strict mode violation: getByRole('banner') resolved to 2 elements:\n    1) <button role=\"banner\" class=\"site-alert\" data-link=\"/new-homes-now-ready\">…</button> aka getByRole('banner').filter({ hasText: 'New homes. Now ready.SM |' })\n    2) <header role=\"banner\" class=\"site-header\">…</header> aka locator('header')\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('banner')\u001b[22m\n","name":"toBeVisible","pass":false},"name":"Error"},"level":"error","message":"Error asserting redirect-to-home behavior","timestamp":"2026-03-23T18:02:54.509Z"}
 {"level":"info","message":"Navigating to a likely-nonexistent path to observe redirect behavior","timestamp":"2026-03-23T18:10:26.971Z"}
 {"level":"info","message":"Asserting the site redirected the request","timestamp":"2026-03-23T18:10:27.743Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-23T18:26:26.786Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-23T18:26:27.818Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-23T18:26:27.830Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-23T18:26:28.199Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-23T18:26:28.497Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-23T18:26:28.927Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-23T18:26:29.981Z"}
+{"level":"info","message":"Locating state search input on state landing page","timestamp":"2026-03-23T18:26:30.264Z"}
+{"level":"info","message":"Typing \"Ohio\" into state search input","timestamp":"2026-03-23T18:26:30.281Z"}
+{"level":"info","message":"Waiting for Ohio options to appear","timestamp":"2026-03-23T18:26:30.338Z"}
+{"level":"info","message":"Found 1 Ohio option(s)","timestamp":"2026-03-23T18:26:30.353Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-23T18:29:29.058Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-23T18:29:30.266Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-23T18:29:30.284Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-23T18:29:30.652Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-23T18:29:31.053Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-23T18:29:31.446Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-23T18:29:32.425Z"}
+{"level":"info","message":"Locating state search input on state landing page","timestamp":"2026-03-23T18:29:32.676Z"}
+{"level":"info","message":"Typing \"Ohio\" into state search input","timestamp":"2026-03-23T18:29:32.688Z"}
+{"level":"info","message":"Waiting for Ohio options to appear","timestamp":"2026-03-23T18:29:32.731Z"}
+{"level":"info","message":"Found 1 Ohio option(s)","timestamp":"2026-03-23T18:29:32.746Z"}
+{"level":"info","message":"Clicking first Ohio option to navigate to Ohio page","timestamp":"2026-03-23T18:29:32.749Z"}
+{"level":"info","message":"Navigation to Ohio page detected","timestamp":"2026-03-23T18:29:33.978Z"}
+{"level":"info","message":"Found 0 Ohio listing(s) on landing page","timestamp":"2026-03-23T18:29:34.473Z"}
+{"error":{"matcherResult":{"message":"\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m","pass":false},"name":"Error"},"level":"error","message":"Error searching for Ohio on state page","timestamp":"2026-03-23T18:29:34.476Z"}
+{"level":"error","message":"Error selecting Texas or validating navigation","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:284:34\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:247:9\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:227:5","timestamp":"2026-03-23T18:29:34.476Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-23T18:34:18.450Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-23T18:34:19.495Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-23T18:34:19.528Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-23T18:34:19.826Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-23T18:34:20.078Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-23T18:34:20.536Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-23T18:34:21.745Z"}
+{"level":"info","message":"Click the Ohio state link and validate Ohio landing page","timestamp":"2026-03-23T18:34:22.004Z"}
+{"level":"info","message":"Found 0 Ohio listing(s) on landing page","timestamp":"2026-03-23T18:34:26.536Z"}
+{"error":{"matcherResult":{"message":"\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m","pass":false},"name":"Error"},"level":"error","message":"Error navigating to Ohio state page or validating listings","timestamp":"2026-03-23T18:34:26.538Z"}
+{"level":"error","message":"Error selecting Texas or validating navigation","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:263:34\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:247:9\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:227:5","timestamp":"2026-03-23T18:34:26.539Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-23T18:38:39.406Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-23T18:38:40.494Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-23T18:38:40.511Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-23T18:38:40.788Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-23T18:38:41.026Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-23T18:38:41.635Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-23T18:38:44.133Z"}
+{"level":"info","message":"Locating state search input on state landing page","timestamp":"2026-03-23T18:38:45.506Z"}
+{"level":"info","message":"Typing \"Ohio\" into state search input","timestamp":"2026-03-23T18:38:45.530Z"}
+{"level":"info","message":"Waiting for Ohio options to appear","timestamp":"2026-03-23T18:38:45.626Z"}
+{"level":"info","message":"Found 1 Ohio option(s)","timestamp":"2026-03-23T18:38:45.656Z"}
+{"level":"info","message":"Clicking first Ohio option to navigate to Ohio page","timestamp":"2026-03-23T18:38:45.658Z"}
+{"level":"info","message":"Navigation to Ohio page detected","timestamp":"2026-03-23T18:38:47.797Z"}
+{"level":"info","message":"Found 0 Ohio listing(s) on landing page","timestamp":"2026-03-23T18:38:47.867Z"}
+{"error":{"matcherResult":{"message":"\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m","pass":false},"name":"Error"},"level":"error","message":"Error searching for Ohio on state page","timestamp":"2026-03-23T18:38:47.870Z"}
+{"level":"error","message":"Error selecting Texas or validating navigation","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:284:34\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:247:9\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:227:5","timestamp":"2026-03-23T18:38:47.871Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-23T18:41:46.121Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-23T18:41:47.345Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-23T18:41:47.367Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-23T18:41:47.649Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-23T18:41:47.980Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-23T18:41:48.417Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-23T18:41:51.927Z"}
+{"level":"info","message":"Locating state search input on state landing page","timestamp":"2026-03-23T18:41:54.163Z"}
+{"level":"info","message":"Typing \"Ohio\" into state search input","timestamp":"2026-03-23T18:41:54.193Z"}
+{"level":"info","message":"Waiting for Ohio options to appear","timestamp":"2026-03-23T18:41:54.300Z"}
+{"level":"info","message":"Found 1 Ohio option(s) via link role","timestamp":"2026-03-23T18:41:54.487Z"}
+{"level":"info","message":"Clicking first Ohio option to navigate to Ohio page","timestamp":"2026-03-23T18:41:54.487Z"}
+{"level":"info","message":"Navigation to Ohio page detected","timestamp":"2026-03-23T18:41:56.272Z"}
+{"level":"info","message":"Found 0 Ohio listing(s) on landing page","timestamp":"2026-03-23T18:41:56.338Z"}
+{"error":{"matcherResult":{"message":"\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m","pass":false},"name":"Error"},"level":"error","message":"Error searching for Ohio on state page","timestamp":"2026-03-23T18:41:56.341Z"}
+{"level":"error","message":"Error selecting Texas or validating navigation","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:295:34\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:247:9\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:227:5","timestamp":"2026-03-23T18:41:56.341Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-23T18:42:56.603Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-23T18:42:57.628Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-23T18:42:57.655Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-23T18:42:57.949Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-23T18:42:58.190Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-23T18:42:58.627Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-23T18:43:01.290Z"}
+{"level":"info","message":"Locating state search input on state landing page","timestamp":"2026-03-23T18:43:02.843Z"}
+{"level":"info","message":"Typing \"Ohio\" into state search input","timestamp":"2026-03-23T18:43:02.889Z"}
+{"level":"info","message":"Waiting for Ohio options to appear","timestamp":"2026-03-23T18:43:03.002Z"}
+{"level":"info","message":"Found 1 Ohio option(s) via link role","timestamp":"2026-03-23T18:43:03.199Z"}
+{"level":"info","message":"Clicking first Ohio option to navigate to Ohio page","timestamp":"2026-03-23T18:43:03.199Z"}
+{"level":"info","message":"Navigation to Ohio page detected","timestamp":"2026-03-23T18:43:04.936Z"}
+{"level":"info","message":"Found 0 Ohio listing(s) on landing page","timestamp":"2026-03-23T18:43:05.000Z"}
+{"error":{"matcherResult":{"message":"\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m","pass":false},"name":"Error"},"level":"error","message":"Error searching for Ohio on state page","timestamp":"2026-03-23T18:43:05.003Z"}
+{"level":"error","message":"Error selecting Texas or validating navigation","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:301:34\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:247:9\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:227:5","timestamp":"2026-03-23T18:43:05.003Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-23T18:44:07.598Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-23T18:44:08.678Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-23T18:44:08.697Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-23T18:44:08.953Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-23T18:44:09.194Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-23T18:44:09.731Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-23T18:44:10.741Z"}
+{"level":"info","message":"Locating state search input on state landing page","timestamp":"2026-03-23T18:44:11.032Z"}
+{"level":"info","message":"Typing \"Ohio\" into state search input","timestamp":"2026-03-23T18:44:11.047Z"}
+{"level":"info","message":"Waiting for Ohio options to appear","timestamp":"2026-03-23T18:44:11.101Z"}
+{"level":"info","message":"Found 1 Ohio option(s) via link role","timestamp":"2026-03-23T18:44:11.116Z"}
+{"level":"info","message":"Clicking first Ohio option to navigate to Ohio page","timestamp":"2026-03-23T18:44:11.117Z"}
+{"level":"info","message":"Navigation to Ohio page detected","timestamp":"2026-03-23T18:44:12.133Z"}
+{"level":"info","message":"Found 0 Ohio listing(s) on landing page","timestamp":"2026-03-23T18:44:12.199Z"}
+{"error":{"matcherResult":{"message":"\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m","pass":false},"name":"Error"},"level":"error","message":"Error searching for Ohio on state page","timestamp":"2026-03-23T18:44:12.202Z"}
+{"level":"error","message":"Error selecting Texas or validating navigation","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:301:34\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:247:9\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:227:5","timestamp":"2026-03-23T18:44:12.202Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-23T18:48:27.158Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-23T18:48:28.576Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-23T18:48:28.606Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-23T18:48:28.890Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-23T18:48:29.438Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-23T18:48:30.148Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-23T18:48:31.509Z"}
+{"level":"info","message":"Locating state search input on state landing page","timestamp":"2026-03-23T18:48:34.834Z"}
+{"level":"info","message":"Typing \"Ohio\" into state search input","timestamp":"2026-03-23T18:48:35.036Z"}
+{"level":"info","message":"Waiting for Ohio options to appear","timestamp":"2026-03-23T18:48:35.569Z"}
+{"level":"info","message":"Found 1 Ohio option(s) via link role","timestamp":"2026-03-23T18:48:35.715Z"}
+{"level":"info","message":"Clicking first Ohio option to navigate to Ohio page","timestamp":"2026-03-23T18:48:35.715Z"}
+{"level":"info","message":"Navigation to Ohio page detected","timestamp":"2026-03-23T18:48:37.250Z"}
+{"level":"info","message":"Found 0 Ohio listing(s) on landing page","timestamp":"2026-03-23T18:48:37.942Z"}
+{"error":{"matcherResult":{"message":"\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m","pass":false},"name":"Error"},"level":"error","message":"Error searching for Ohio on state page","timestamp":"2026-03-23T18:48:37.945Z"}
+{"level":"error","message":"Error selecting Texas or validating navigation","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m0\u001b[39m\nReceived:   \u001b[31m0\u001b[39m\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:301:34\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:247:9\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:227:5","timestamp":"2026-03-23T18:48:37.945Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-23T18:49:53.393Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-23T18:49:54.759Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-23T18:49:54.789Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-23T18:49:55.097Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-23T18:49:55.610Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-23T18:49:56.244Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-23T18:49:59.454Z"}
+{"level":"info","message":"Locating state search input on state landing page","timestamp":"2026-03-23T18:50:01.292Z"}
+{"level":"info","message":"Typing \"Ohio\" into state search input","timestamp":"2026-03-23T18:50:01.420Z"}
+{"level":"info","message":"Waiting for Ohio options to appear","timestamp":"2026-03-23T18:50:01.685Z"}
+{"level":"info","message":"Found 1 Ohio option(s) via link role","timestamp":"2026-03-23T18:50:01.838Z"}
+{"level":"info","message":"Clicking first Ohio option to navigate to Ohio page","timestamp":"2026-03-23T18:50:01.839Z"}
+{"level":"info","message":"Navigation to Ohio page detected","timestamp":"2026-03-23T18:50:03.732Z"}
+{"level":"info","message":"Found 39 Ohio link(s) and 2 heading(s) on page","timestamp":"2026-03-23T18:50:03.940Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-23T18:50:35.842Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-23T18:50:36.952Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-23T18:50:36.967Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-23T18:50:37.231Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-23T18:50:37.487Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-23T18:50:37.775Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-23T18:50:40.567Z"}
+{"level":"info","message":"Locating state search input on state landing page","timestamp":"2026-03-23T18:50:41.897Z"}
+{"level":"info","message":"Typing \"Ohio\" into state search input","timestamp":"2026-03-23T18:50:41.926Z"}
+{"level":"info","message":"Waiting for Ohio options to appear","timestamp":"2026-03-23T18:50:42.018Z"}
+{"level":"info","message":"Found 1 Ohio option(s) via link role","timestamp":"2026-03-23T18:50:42.210Z"}
+{"level":"info","message":"Clicking first Ohio option to navigate to Ohio page","timestamp":"2026-03-23T18:50:42.211Z"}
+{"level":"info","message":"Navigation to Ohio page detected","timestamp":"2026-03-23T18:50:44.047Z"}
+{"level":"info","message":"Found 39 Ohio link(s) and 2 heading(s) on page","timestamp":"2026-03-23T18:50:44.117Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-23T18:53:47.648Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-23T18:53:49.191Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-23T18:53:49.230Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-23T18:53:49.982Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-23T18:53:50.443Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-23T18:53:50.814Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-23T18:53:51.994Z"}
+{"level":"info","message":"Locating state search input on state landing page","timestamp":"2026-03-23T18:53:52.356Z"}
+{"level":"info","message":"Typing \"Ohio\" into state search input","timestamp":"2026-03-23T18:53:52.397Z"}
+{"level":"info","message":"Waiting for Ohio options to appear","timestamp":"2026-03-23T18:53:52.482Z"}
+{"level":"info","message":"Found 1 Ohio option(s) via link role","timestamp":"2026-03-23T18:53:52.575Z"}
+{"level":"info","message":"Clicking first Ohio option to navigate to Ohio page","timestamp":"2026-03-23T18:53:52.575Z"}
+{"level":"info","message":"Navigation to Ohio page detected","timestamp":"2026-03-23T18:53:53.818Z"}
+{"level":"info","message":"Found 3 Ohio item(s) on listings page","timestamp":"2026-03-23T18:53:54.521Z"}
+{"level":"info","message":"Opening home page for Texas search input smoke test","timestamp":"2026-03-23T18:56:40.761Z"}
+{"level":"info","message":"Waiting for search input to be visible","timestamp":"2026-03-23T18:56:41.800Z"}
+{"level":"info","message":"Entering \"Texas\" in home page search input","timestamp":"2026-03-23T18:56:41.848Z"}
+{"level":"info","message":"Waiting for Texas dropdown option to be visible","timestamp":"2026-03-23T18:56:42.174Z"}
+{"level":"info","message":"Clicking Texas dropdown option","timestamp":"2026-03-23T18:56:42.472Z"}
+{"level":"info","message":"Waiting for navigation to Texas map page","timestamp":"2026-03-23T18:56:42.965Z"}
+{"level":"info","message":"Navigation to Texas map page successful","timestamp":"2026-03-23T18:56:45.722Z"}
+{"level":"info","message":"Locating state search input on state landing page","timestamp":"2026-03-23T18:56:48.329Z"}
+{"level":"info","message":"Typing \"Ohio\" into state search input","timestamp":"2026-03-23T18:56:48.363Z"}
+{"level":"info","message":"Waiting for Ohio options to appear","timestamp":"2026-03-23T18:56:48.463Z"}
+{"level":"info","message":"Found 1 Ohio option(s) via link role","timestamp":"2026-03-23T18:56:48.642Z"}
+{"level":"info","message":"Clicking first Ohio option to navigate to Ohio page","timestamp":"2026-03-23T18:56:48.642Z"}
+{"level":"info","message":"Navigation to Ohio page detected","timestamp":"2026-03-23T18:56:49.931Z"}
+{"level":"info","message":"Found 3 Ohio item(s) on listings page","timestamp":"2026-03-23T18:56:50.175Z"}
