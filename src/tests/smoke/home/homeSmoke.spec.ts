@@ -1,6 +1,11 @@
   
 import { test, expect } from '../../fixtures';
 import { LoggerUtil } from '../../../utils/LoggerUtil';
+import { readFileSync } from 'fs';
+const states = JSON.parse(readFileSync(new URL('../../../testdata/states.json', import.meta.url), 'utf8'));
+// Use random selection for smoke picks. Optional reproducible seed via `SMK_SEED` env var.
+import { attachScreenshot } from '../../../utils/TestUtil';
+import { createRng, pickDistinctIndexes } from '../../../utils/RandomUtil';
 
 test.describe('Home Page Smoke Tests', () => {
   test.beforeEach(async ({ pm }) => {
@@ -193,64 +198,66 @@ test.describe('Home Page Smoke Tests', () => {
   });
 });
 
-test('SMK-020: Search input navigates to Texas map page', { tag: ['@smoke'] }, async ({ pm, page }) => {
-    // Troubleshooting: Only validate navigation to home page
-    LoggerUtil.info('Opening home page for Texas search input smoke test');
+test('SMK-020: Search input navigates via random picks', { tag: ['@smoke'] }, async ({ pm, page }) => {
+  const seedEnv = process.env.SMK_SEED;
+  const seed = seedEnv ? Number(seedEnv) : undefined;
+  const rng = createRng(seed);
+  const { idxA, idxB } = pickDistinctIndexes(states.length, rng);
+  const stateA = states[idxA];
+  const stateB = states[idxB];
+
+  await test.info().attach('selection-info', {
+    body: Buffer.from(JSON.stringify({ method: 'random', seed: seedEnv ?? null, idxA, idxB, stateA: stateA.slug, stateB: stateB.slug }, null, 2)),
+    contentType: 'application/json',
+  });
+
+  LoggerUtil.info(`Opening home page for random search smoke test (stateA=${stateA.name}, stateB=${stateB.name})`);
+  try {
+    await pm.homePage.open();
+    await expect(page).toHaveURL('https://www.drhorton.com/');
+  } catch (error) {
+    if (error instanceof Error) LoggerUtil.error('Error opening home page or validating URL', { stack: error.stack });
+    else LoggerUtil.error('Error opening home page or validating URL', { error });
+    throw error;
+  }
+
+  await test.step(`Select ${stateA.name} from home search and open map`, async () => {
+    await pm.homePage.selectStateFromSearch(stateA.name, stateA.slug);
+    await attachScreenshot(test.info(), 'state-map-page', page, true);
+  });
+
+  await test.step(`Search ${stateB.name} on ${stateA.name} page and validate listings`, async () => {
+    await pm.stateLandingPage.searchAndOpenState(stateB.name, { attachScreenshots: true, testInfo: test.info(), stateSlug: stateB.slug });
+    const total = await pm.listingsPage.waitForStateListings(stateB.slug, stateB.name);
+    LoggerUtil.info(`Found ${total} ${stateB.name} item(s) on listings page`);
+    expect(total).toBeGreaterThan(0);
+    await attachScreenshot(test.info(), 'state-search-results-list', page, false);
+    await test.info().attach('second-search-results', { body: await page.screenshot(), contentType: 'image/png' });
+  });
+
+});
+
+test('EDGE-404-REDIRECT: Non-existent path redirects to home', { tag: ['@edge'] }, async ({ pm, page }) => {
+  await test.step('Navigate to a non-existent path and assert redirect-to-home', async () => {
+    LoggerUtil.info('Navigating to a likely-nonexistent path to observe redirect behavior');
     try {
-      await pm.homePage.open();
+      const [resp] = await Promise.all([
+        page.waitForResponse((r) => (r.status() === 301 || r.status() === 302) && r.url().includes('/this-path-does-not-exist')),
+        page.goto('https://www.drhorton.com/this-path-does-not-exist', { waitUntil: 'domcontentloaded' }),
+      ]);
+
+      LoggerUtil.info('Asserting the site redirected the request');
+      expect([301, 302]).toContain(resp.status());
       await expect(page).toHaveURL('https://www.drhorton.com/');
+      // Basic visible element sanity check for homepage using page model locator
+      await expect(pm.homePage.topBanner).toBeVisible();
+      await test.info().attach('redirected-home-screenshot', {
+        body: await page.screenshot(),
+        contentType: 'image/png',
+      });
     } catch (error) {
-      if (error instanceof Error) {
-        LoggerUtil.error('Error opening home page or validating URL', { stack: error.stack });
-      } else {
-        LoggerUtil.error('Error opening home page or validating URL', { error });
-      }
+      LoggerUtil.error('Error asserting redirect-to-home behavior', { error });
       throw error;
     }
-    await test.step('Enter "Texas" in search input', async () => {
-      LoggerUtil.info('Waiting for search input to be visible');
-      try {
-        await expect(pm.homePage.communitySearch).toBeVisible({ timeout: 10000 });
-        LoggerUtil.info('Entering "Texas" in home page search input');
-        await pm.homePage.communitySearch.fill('Texas');
-        const inputScreenshot = await pm.homePage.page.screenshot({ fullPage: false });
-        await test.info().attach('Search input filled', { body: inputScreenshot, contentType: 'image/png' });
-      } catch (error) {
-        if (error instanceof Error) {
-          LoggerUtil.error('Error entering "Texas" in search input', { stack: error.stack });
-        } else {
-          LoggerUtil.error('Error entering "Texas" in search input', { error });
-        }
-        throw error;
-      }
-    });
-    await test.step('Select Texas from dropdown and validate navigation', async () => {
-      LoggerUtil.info('Waiting for Texas dropdown option to be visible');
-      try {
-        const texasOption = pm.homePage.page.getByRole('link', { name: 'Texas' });
-        await expect(texasOption).toBeVisible({ timeout: 10000 });
-        // Trigger dropdown display by focusing or clicking the search input
-        await pm.homePage.communitySearch.focus();
-        await pm.homePage.communitySearch.press('ArrowDown');
-        // Wait for dropdown option to be visible before screenshot
-        await expect(texasOption).toBeVisible({ timeout: 5000 });
-        const dropdownScreenshot = await pm.homePage.page.screenshot({ fullPage: false });
-        await test.info().attach('Dropdown displayed', { body: dropdownScreenshot, contentType: 'image/png' });
-        LoggerUtil.info('Clicking Texas dropdown option');
-        await texasOption.click();
-        LoggerUtil.info('Waiting for navigation to Texas map page');
-        await pm.homePage.page.waitForURL('**/texas', { timeout: 10000 });
-        LoggerUtil.info('Navigation to Texas map page successful');
-        const texasMapScreenshot = await pm.homePage.page.screenshot({ fullPage: true });
-        await test.info().attach('Texas map page', { body: texasMapScreenshot, contentType: 'image/png' });
-        await expect(pm.homePage.page).toHaveURL(/texas/);
-      } catch (error) {
-        if (error instanceof Error) {
-          LoggerUtil.error('Error selecting Texas or validating navigation', { stack: error.stack });
-        } else {
-          LoggerUtil.error('Error selecting Texas or validating navigation', { error });
-        }
-        throw error;
-      }
-    });
   });
+});

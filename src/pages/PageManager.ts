@@ -10,6 +10,7 @@ import { WarrantyPage } from './WarrantyPage';
 import { MilitaryBenefitsPage } from './MilitaryBenefitsPage';
 import { CareersPage } from './CareersPage';
 import { StateLandingPage } from './StateLandingPage';
+import { ListingsPage } from './ListingsPage';
 
 export class PageManager {
   readonly page: Page;
@@ -24,6 +25,7 @@ export class PageManager {
   private _militaryBenefitsPage?: MilitaryBenefitsPage;
   private _careersPage?: CareersPage;
   private _stateLandingPage?: StateLandingPage;
+  private _listingsPage?: import('./ListingsPage').ListingsPage;
 
   constructor(page: Page) {
     this.page = page;
@@ -40,4 +42,5 @@ export class PageManager {
   get militaryBenefitsPage() { return (this._militaryBenefitsPage ??= new MilitaryBenefitsPage(this.page)); }
   get careersPage() { return (this._careersPage ??= new CareersPage(this.page)); }
   get stateLandingPage() { return (this._stateLandingPage ??= new StateLandingPage(this.page)); }
+  get listingsPage() { return (this._listingsPage ??= new ListingsPage(this.page)); }
 }

@@ -20,9 +20,11 @@
     "smoke:pages": "npx playwright test src/tests/smoke/pages",
     "smoke:privacy": "npx playwright test src/tests/smoke/privacy",
     "smoke:dashboard": "npx playwright test src/tests/smoke/dashboard/dashboardSmoke.spec.ts",
+    "smoke:all": "npx playwright test src/tests/smoke",
     "reg:smoke": "npx playwright test src/tests/regression --grep @smoke",
     "e2e:dashboard": "npx playwright test src/tests/e2e/dashboard/dashboardE2E.spec.ts",
     "e2e:critical": "npx playwright test src/tests/e2e --grep @critical",
+    "unit": "npx playwright test src/tests/unit",
     "last": "npx playwright test --last-failed",
     "report": "npx playwright show-report"
   },
