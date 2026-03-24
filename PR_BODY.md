@@ -71,3 +71,11 @@ Revert the branch or the merge commit to undo changes.
 - The PR preserves `RotationUtil` for teams that prefer deterministic rotation instead of seeded RNG.
 - Playwright artifacts from local runs are available under `test-results/` and the HTML report.
 
+## Documentation updates in this branch
+
+- Updated `README.md` to reflect current page objects, helpers, utilities, test inventory, and smoke selection behavior (seeded RNG, selection attachments). See the `Utilities`, `POM`, `Helpers`, `Test Organization`, and `Test Inventory` sections for details.
+- Added developer helper script entries: `scripts/scrape_drhorton_states.mjs` and `scripts/inspect_state_option.mjs` to README.
+- Added `package.json` scripts: `unit` (run unit tests) and `smoke:all` (alias for smoke). These are intended for local convenience and CI jobs.
+
+If you'd like, I can break the docs changes into a separate PR — they were bundled here because they document the core behavioral changes introduced in this branch.
+
