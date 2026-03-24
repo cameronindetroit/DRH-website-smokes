@@ -398,6 +398,35 @@ drhorton.com/
 |----|-------|----------|---------------|---------------------|-----------------|----------|-------|
 | REG-049 | Cookie banner — Reject | Privacy | Clean session | 1. Click "Reject" on cookie banner | Banner closes, cookies not set (or minimal) | High | |
 | REG-050 | Cookie banner — Manage Cookies | Privacy | Clean session | 1. Click "Manage Cookies" on cookie banner | Cookie preferences panel opens | Medium | |
+
+---
+
+## Edge & Negative Smoke Tests
+
+Purpose: rapid, high-value checks to catch brittle behavior and regressions that positive smoke cases may miss. Run these as part of a nightly smoke job or when making frontend/search/ui changes.
+
+- **SMK-N-001 — Search: no-results**: Verify the home page search returns a clear "no results" UI state when typing an unknown string (e.g., "qwertyuiop") and that no navigation occurs. Expect a user-facing message and no JS errors.
+- **SMK-N-002 — Ambiguous-state exact-match validation**: Reproduce ambiguous inputs (e.g., search for "Kansas" vs "Arkansas", or "New" -> New York/New Jersey) and assert the test selects the exact-state option or falls back to the correct state link by slug. This guards against partial/loose matches that navigated to the wrong state.
+- **SMK-N-003 — Cookie preferences impact**: With a clean session, click both "Reject" and "Manage Cookies" flows and verify core flows (search, state navigation, contact form submit) still function or degrade gracefully. Capture cookie state and attach selection artifacts.
+- **SMK-N-004 — Degraded network / slow-load handling**: Simulate slow/latency network conditions and confirm primary smoke flows (home load, search, state navigation) either complete within an acceptable timeout or fail with a clear error and captured artifacts.
+- **SMK-N-005 — Site-wide link health (basic scan)**: Sample a curated list of internal links (main nav, footer, 10 state links) and assert they return 200/OK (or load without a client-side error). Flag obvious 4xx/5xx responses for triage.
+- **SMK-N-006 — Accessibility basics (smoke)**: Run a lightweight accessibility check (landmarks present, skip link exists, images have alt text, no critical aXe violations) on the home page and one state landing page.
+- **SMK-N-007 — Form negative cases**: Verify contact/warranty forms show validation errors for empty and malformed inputs (invalid email, short request details, incorrect phone). Ensure validation is client-visible and does not submit.
+- **SMK-N-008 — Search suggestion de-duplication & prioritization**: Type partial tokens that could match many items ("New", "San", "Port") and assert suggestions are de-duplicated, prioritized sensibly, and include state slugs where appropriate.
+- **SMK-N-009 — Deterministic selection reproducibility**: Verify `SMK-020` selection with `SMK_SEED` reproduces the same picked state across runs when `SMK_SEED` is fixed; when `SMK_ROTATION_INDEX` is set, rotation behavior should be deterministic and override seed if configured.
+
+Execution notes:
+- Frequency: nightly or on PRs that touch search, POMs, or site chrome.
+- Artifacts: attach `selection-info.json`, screenshots, and HTML snapshots to each run for triage. Use `test.info.attach` for Playwright artifacts.
+- Automation hints: reuse `HomePage`/`StateLandingPage` hardened selectors; for network throttling use Playwright network emulation; for aXe checks use the existing `axe-core` helper if available or add a small helper wrapper.
+- Runner example (local):
+
+```bash
+# Run the single negative test file (example)
+npx playwright test src/tests/smoke/home/search-no-results.spec.ts --project=chromium
+```
+
+---
 | REG-051 | Cookie banner persists on dismiss | Privacy | None | 1. Dismiss cookie banner 2. Refresh page | Cookie banner does not reappear | Medium | |
 
 ### Error Handling
