@@ -1,0 +1,414 @@
+[
+  {
+    "code": "AL",
+    "name": "Alabama",
+    "slug": "alabama",
+    "cities": [
+      "Auburn Opelika",
+      "Baldwin County",
+      "Birmingham",
+      "Huntsville",
+      "Mobile",
+      "Montgomery",
+      "Southeast Alabama",
+      "Tuscaloosa"
+    ]
+  },
+  {
+    "code": "AZ",
+    "name": "Arizona",
+    "slug": "arizona",
+    "cities": [
+      "Phoenix",
+      "Tucson"
+    ]
+  },
+  {
+    "code": "AR",
+    "name": "Arkansas",
+    "slug": "arkansas",
+    "cities": [
+      "Central Arkansas",
+      "Northeast Arkansas",
+      "Northwest Arkansas"
+    ]
+  },
+  {
+    "code": "CA",
+    "name": "California",
+    "slug": "california",
+    "cities": [
+      "Bay Area",
+      "Central Valley",
+      "Inland Empire",
+      "Los Angeles",
+      "Palm Springs",
+      "Sacramento",
+      "San Diego",
+      "Victorville"
+    ]
+  },
+  {
+    "code": "CO",
+    "name": "Colorado",
+    "slug": "colorado",
+    "cities": [
+      "Colorado Springs",
+      "Denver",
+      "Northern Colorado"
+    ]
+  },
+  {
+    "code": "DE",
+    "name": "Delaware",
+    "slug": "delaware",
+    "cities": [
+      "Delaware"
+    ]
+  },
+  {
+    "code": "FL",
+    "name": "Florida",
+    "slug": "florida",
+    "cities": [
+      "East Florida",
+      "Jacksonville Area",
+      "Lake County",
+      "Manatee Sarasota",
+      "Northwest Florida",
+      "Orange County",
+      "Osceola County",
+      "Panama City",
+      "Polk County",
+      "Seminole County",
+      "Southeast Florida",
+      "Southwest Florida",
+      "Tallahassee",
+      "Tampa",
+      "Volusia County",
+      "West Central Florida"
+    ]
+  },
+  {
+    "code": "GA",
+    "name": "Georgia",
+    "slug": "georgia",
+    "cities": [
+      "Atlanta",
+      "Augusta",
+      "Brunswick",
+      "Macon Area",
+      "Savannah",
+      "South Chattanooga Area",
+      "Valdosta"
+    ]
+  },
+  {
+    "code": "HI",
+    "name": "Hawaii",
+    "slug": "hawaii",
+    "cities": [
+      "Oahu"
+    ]
+  },
+  {
+    "code": "ID",
+    "name": "Idaho",
+    "slug": "idaho",
+    "cities": [
+      "Northern Idaho"
+    ]
+  },
+  {
+    "code": "IL",
+    "name": "Illinois",
+    "slug": "illinois",
+    "cities": [
+      "Chicago"
+    ]
+  },
+  {
+    "code": "IN",
+    "name": "Indiana",
+    "slug": "indiana",
+    "cities": [
+      "Fort Wayne",
+      "Indianapolis",
+      "Northwest Indiana",
+      "Southern Indiana"
+    ]
+  },
+  {
+    "code": "IA",
+    "name": "Iowa",
+    "slug": "iowa",
+    "cities": [
+      "Des Moines",
+      "Eastern Iowa"
+    ]
+  },
+  {
+    "code": "KS",
+    "name": "Kansas",
+    "slug": "kansas",
+    "cities": [
+      "Kansas City Area"
+    ]
+  },
+  {
+    "code": "KY",
+    "name": "Kentucky",
+    "slug": "kentucky",
+    "cities": [
+      "Lexington Area",
+      "Louisville",
+      "Northern Kentucky",
+      "Southern Kentucky"
+    ]
+  },
+  {
+    "code": "LA",
+    "name": "Louisiana",
+    "slug": "louisiana",
+    "cities": [
+      "Alexandria",
+      "Baton Rouge",
+      "Hammond Ponchatoula",
+      "Lake Charles Lafayette",
+      "New Orleans Area",
+      "Northshore"
+    ]
+  },
+  {
+    "code": "MD",
+    "name": "Maryland",
+    "slug": "maryland",
+    "cities": [
+      "Maryland Eastern Shore",
+      "Washington Dc Area"
+    ]
+  },
+  {
+    "code": "MN",
+    "name": "Minnesota",
+    "slug": "minnesota",
+    "cities": [
+      "Minneapolis"
+    ]
+  },
+  {
+    "code": "MS",
+    "name": "Mississippi",
+    "slug": "mississippi",
+    "cities": [
+      "Gulf Coast",
+      "Hattiesburg",
+      "Jackson",
+      "North Mississippi"
+    ]
+  },
+  {
+    "code": "MO",
+    "name": "Missouri",
+    "slug": "missouri",
+    "cities": [
+      "Kansas City Area"
+    ]
+  },
+  {
+    "code": "NE",
+    "name": "Nebraska",
+    "slug": "nebraska",
+    "cities": [
+      "Omaha"
+    ]
+  },
+  {
+    "code": "NV",
+    "name": "Nevada",
+    "slug": "nevada",
+    "cities": [
+      "Las Vegas",
+      "Reno"
+    ]
+  },
+  {
+    "code": "NJ",
+    "name": "New Jersey",
+    "slug": "new-jersey",
+    "cities": [
+      "New Jersey"
+    ]
+  },
+  {
+    "code": "NM",
+    "name": "New Mexico",
+    "slug": "new-mexico",
+    "cities": [
+      "Albuquerque"
+    ]
+  },
+  {
+    "code": "NC",
+    "name": "North Carolina",
+    "slug": "north-carolina",
+    "cities": [
+      "Asheville",
+      "Carolina Shores",
+      "Charlotte",
+      "Eastern North Carolina",
+      "Elizabeth City",
+      "Fayetteville",
+      "Greensboro Winston Salem",
+      "Raleigh Durham",
+      "Wilmington"
+    ]
+  },
+  {
+    "code": "OH",
+    "name": "Ohio",
+    "slug": "ohio",
+    "cities": [
+      "Cincinnati",
+      "Columbus",
+      "Dayton Area",
+      "Toledo"
+    ]
+  },
+  {
+    "code": "OK",
+    "name": "Oklahoma",
+    "slug": "oklahoma",
+    "cities": [
+      "Oklahoma City",
+      "Tulsa"
+    ]
+  },
+  {
+    "code": "OR",
+    "name": "Oregon",
+    "slug": "oregon",
+    "cities": [
+      "Central Oregon",
+      "Greater Portland",
+      "Southern Oregon",
+      "Southern Willamette Valley",
+      "Willamette Valley"
+    ]
+  },
+  {
+    "code": "PA",
+    "name": "Pennsylvania",
+    "slug": "pennsylvania",
+    "cities": [
+      "Central Pennsylvania",
+      "Lehigh Valley",
+      "Philadelphia Area",
+      "Pittsburgh Area"
+    ]
+  },
+  {
+    "code": "SC",
+    "name": "South Carolina",
+    "slug": "south-carolina",
+    "cities": [
+      "Aiken",
+      "Charleston",
+      "Columbia",
+      "Florence",
+      "Greenville",
+      "Hilton Head",
+      "Myrtle Beach",
+      "South Carolina Charlotte"
+    ]
+  },
+  {
+    "code": "TN",
+    "name": "Tennessee",
+    "slug": "tennessee",
+    "cities": [
+      "Chattanooga",
+      "Knoxville",
+      "Memphis",
+      "Morristown",
+      "Nashville",
+      "North East Tennessee",
+      "South Central Tennessee"
+    ]
+  },
+  {
+    "code": "TX",
+    "name": "Texas",
+    "slug": "texas",
+    "cities": [
+      "Abilene",
+      "Austin",
+      "Beaumont",
+      "Brazos Valley",
+      "Coastal Bend",
+      "Dallas",
+      "East Texas",
+      "Fort Worth",
+      "Houston",
+      "Killeen Temple Waco",
+      "Lubbock",
+      "Midland Odessa",
+      "New Braunfels",
+      "San Antonio",
+      "San Marcos"
+    ]
+  },
+  {
+    "code": "UT",
+    "name": "Utah",
+    "slug": "utah",
+    "cities": [
+      "Northern Utah",
+      "Salt Lake City",
+      "St George"
+    ]
+  },
+  {
+    "code": "VA",
+    "name": "Virginia",
+    "slug": "virginia",
+    "cities": [
+      "Charlottesville",
+      "Northern Virginia",
+      "Richmond",
+      "Southern Virginia"
+    ]
+  },
+  {
+    "code": "WA",
+    "name": "Washington",
+    "slug": "washington",
+    "cities": [
+      "Central Washington",
+      "Greater Seattle",
+      "North Sound",
+      "South Sound",
+      "South Washington",
+      "Spokane",
+      "Tri Cities"
+    ]
+  },
+  {
+    "code": "WV",
+    "name": "West Virginia",
+    "slug": "west-virginia",
+    "cities": [
+      "Eastern Panhandle",
+      "Northern West Virginia"
+    ]
+  },
+  {
+    "code": "WI",
+    "name": "Wisconsin",
+    "slug": "wisconsin",
+    "cities": [
+      "Madison",
+      "Southeast Wisconsin"
+    ]
+  }
+]

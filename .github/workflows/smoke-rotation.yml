@@ -1,0 +1,42 @@
+name: Smoke Rotation
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: '0 8 * * *' # daily at 08:00 UTC
+
+jobs:
+  smoke-rotation:
+    name: Run smoke suite with rotation index
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 18
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18.19.0'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps
+
+      - name: Run smoke tests (rotation)
+        env:
+          # Rotation index available to tests. Rotation logic in RotationUtil
+          SMK_ROTATION_INDEX: ${{ github.run_number }}
+          CI_BUILD_NUMBER: ${{ github.run_number }}
+        run: |
+          npx playwright test src/tests/smoke -g "@smoke" --project=chromium
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report

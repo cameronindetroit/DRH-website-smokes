@@ -301,6 +301,20 @@ npx playwright test --grep @smoke
 npx playwright test src/tests/smoke --headed --project=chromium
 ```
 
+**Smoke Selection**
+
+- **Strategy:** By default SMK-020 (community/state search smoke) now selects states randomly at runtime using a small helper. The selection logic lives in [src/utils/RandomUtil.ts](src/utils/RandomUtil.ts).
+- **Seeded reproducibility:** To reproduce a specific random selection, set the `SMK_SEED` environment variable to an integer. Example:
+
+  `SMK_SEED=123 npx playwright test src/tests/smoke/home/homeSmoke.spec.ts -g "SMK-020" --project=chromium`
+
+- **Selection attachment:** Each run attaches a JSON artifact named `selection-info` to the test with `{ method, seed, idxA, idxB, stateA, stateB }` to aid debugging and traceability.
+- **States source:** The canonical state + city list is stored in [src/testdata/states.json](src/testdata/states.json).
+- **Rotation (legacy/CI):** Rotation-based picks are still supported via [src/utils/RotationUtil.ts](src/utils/RotationUtil.ts). To force an index-based pick (CI or manual), set `SMK_ROTATION_INDEX`:
+
+  `SMK_ROTATION_INDEX=5 npx playwright test src/tests/smoke/home/homeSmoke.spec.ts -g "SMK-020" --project=chromium`
+
+
 ### Report with Screenshots
 
 Every smoke test attaches a full-page screenshot to the Playwright HTML report. This gives immediate visual confirmation of each page's state at assertion time.
@@ -397,6 +411,32 @@ A reusable prompt template is included for generating a formal test plan via the
 4. **Risk Assessment** — High-risk areas, coverage gaps, test data needs, and open questions.
 
 ### Output
+
+## Smoke Test Rotation
+
+Smoke tests use a deterministic rotation strategy to keep the smoke suite fast while providing broad coverage over time. The rotation logic lives in [src/utils/RotationUtil.ts](src/utils/RotationUtil.ts#L1-L999) and the home smoke spec reads that logic from [src/tests/smoke/home/homeSmoke.spec.ts](src/tests/smoke/home/homeSmoke.spec.ts#L1-L999).
+
+Rotation precedence (first-match):
+- `SMK_ROTATION_INDEX` env var — manually override the rotation index (useful for reproducing a specific run).
+- `CI_BUILD_NUMBER` env var — CI systems can set this (we also set `SMK_ROTATION_INDEX` to `${{ github.run_number }}` in the example workflow).
+- UTC day count — when none of the above are present, the system rotates daily by using the UTC day number.
+
+How picks are chosen:
+- `stateA` — `states[idxA]` (primary home search)
+- `stateB` — `states[(idxA + 1) % states.length]` (second-step search)
+
+Reproducing a run locally:
+
+```bash
+# pick a rotation index and run the smoke suite for chromium
+export SMK_ROTATION_INDEX=123
+npx playwright test src/tests/smoke -g "@smoke" --project=chromium
+```
+
+During a test run the framework attaches a `rotation-info` artifact (JSON) to each test so you can see `rotationSource`, `idxA`, `idxB`, and the chosen states — use those values to reproduce the same inputs.
+
+Example CI workflow (created at `.github/workflows/smoke-rotation.yml`) sets `SMK_ROTATION_INDEX` to `${{ github.run_number }}` and runs the smoke suite daily. The workflow also uploads the Playwright HTML report as an artifact for review.
+
 
 Both files are written to the `plans/` folder, date-stamped:
 
