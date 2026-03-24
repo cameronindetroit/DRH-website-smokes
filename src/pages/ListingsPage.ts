@@ -26,4 +26,11 @@ export class ListingsPage extends BasePage {
     if ((await links.count()) === 0) throw new Error(`No links found for state ${stateName}`);
     await links.first().click();
   }
+
+  async waitForStateListings(stateSlug: string, stateName?: string, timeout = 15000) {
+    const locator = this.page.locator(`a[href^="/${stateSlug}"]`).filter({ hasText: new RegExp(stateName ?? stateSlug, 'i') });
+    await locator.first().waitFor({ state: 'visible', timeout });
+    const count = await locator.count();
+    return count;
+  }
 }

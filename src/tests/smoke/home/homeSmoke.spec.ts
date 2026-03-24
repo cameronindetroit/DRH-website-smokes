@@ -1,6 +1,11 @@
   
 import { test, expect } from '../../fixtures';
 import { LoggerUtil } from '../../../utils/LoggerUtil';
+import { readFileSync } from 'fs';
+const states = JSON.parse(readFileSync(new URL('../../../testdata/states.json', import.meta.url), 'utf8'));
+// Use random selection for smoke picks. Optional reproducible seed via `SMK_SEED` env var.
+import { attachScreenshot } from '../../../utils/TestUtil';
+import { createRng, pickDistinctIndexes } from '../../../utils/RandomUtil';
 
 test.describe('Home Page Smoke Tests', () => {
   test.beforeEach(async ({ pm }) => {
@@ -193,128 +198,44 @@ test.describe('Home Page Smoke Tests', () => {
   });
 });
 
-test('SMK-020: Search input navigates to Texas map page', { tag: ['@smoke'] }, async ({ pm, page }) => {
-    // Troubleshooting: Only validate navigation to home page
-    LoggerUtil.info('Opening home page for Texas search input smoke test');
-    try {
-      await pm.homePage.open();
-      await expect(page).toHaveURL('https://www.drhorton.com/');
-    } catch (error) {
-      if (error instanceof Error) {
-        LoggerUtil.error('Error opening home page or validating URL', { stack: error.stack });
-      } else {
-        LoggerUtil.error('Error opening home page or validating URL', { error });
-      }
-      throw error;
-    }
-    await test.step('Enter "Texas" in search input', async () => {
-      LoggerUtil.info('Waiting for search input to be visible');
-      try {
-        await expect(pm.homePage.communitySearch).toBeVisible({ timeout: 10000 });
-        LoggerUtil.info('Entering "Texas" in home page search input');
-        await pm.homePage.communitySearch.fill('Texas');
-        const inputScreenshot = await pm.homePage.page.screenshot({ fullPage: false });
-        await test.info().attach('Search input filled', { body: inputScreenshot, contentType: 'image/png' });
-      } catch (error) {
-        if (error instanceof Error) {
-          LoggerUtil.error('Error entering "Texas" in search input', { stack: error.stack });
-        } else {
-          LoggerUtil.error('Error entering "Texas" in search input', { error });
-        }
-        throw error;
-      }
-    });
-    await test.step('Select Texas from dropdown and validate navigation', async () => {
-      LoggerUtil.info('Waiting for Texas dropdown option to be visible');
-      try {
-        const texasOption = pm.homePage.page.getByRole('link', { name: 'Texas' });
-        await expect(texasOption).toBeVisible({ timeout: 10000 });
-        // Trigger dropdown display by focusing or clicking the search input
-        await pm.homePage.communitySearch.focus();
-        await pm.homePage.communitySearch.press('ArrowDown');
-        // Wait for dropdown option to be visible before screenshot
-        await expect(texasOption).toBeVisible({ timeout: 5000 });
-        const dropdownScreenshot = await pm.homePage.page.screenshot({ fullPage: false });
-        await test.info().attach('Dropdown displayed', { body: dropdownScreenshot, contentType: 'image/png' });
-        LoggerUtil.info('Clicking Texas dropdown option');
-        await texasOption.click();
-        LoggerUtil.info('Waiting for navigation to Texas map page');
-        await pm.homePage.page.waitForURL('**/texas', { timeout: 10000 });
-        LoggerUtil.info('Navigation to Texas map page successful');
-        const texasMapScreenshot = await pm.homePage.page.screenshot({ fullPage: true });
-        await test.info().attach('Texas map page', { body: texasMapScreenshot, contentType: 'image/png' });
-        await expect(pm.homePage.page).toHaveURL(/texas/);
-        await test.step('On Texas map page search for Ohio and validate Ohio results', async () => {
-          LoggerUtil.info('Locating state search input on state landing page');
-          try {
-            const statePage = pm.stateLandingPage;
-            // Try common combobox labeled search first
-            let searchInput = page.getByRole('combobox', { name: /search/i }).first();
-            if ((await searchInput.count()) === 0) {
-              // fallback to input[type="search"] or generic textbox
-              searchInput = page.locator('input[type="search"]').first();
-            }
+test('SMK-020: Search input navigates via random picks', { tag: ['@smoke'] }, async ({ pm, page }) => {
+  const seedEnv = process.env.SMK_SEED;
+  const seed = seedEnv ? Number(seedEnv) : undefined;
+  const rng = createRng(seed);
+  const { idxA, idxB } = pickDistinctIndexes(states.length, rng);
+  const stateA = states[idxA];
+  const stateB = states[idxB];
 
-            await expect(searchInput).toBeVisible({ timeout: 10000 });
-            LoggerUtil.info('Typing "Ohio" into state search input');
-            await searchInput.fill('Ohio');
-            // trigger dropdown/options
-            await searchInput.press('ArrowDown');
-
-            LoggerUtil.info('Waiting for Ohio options to appear');
-            const ohioOptions = page.getByRole('link').filter({ hasText: /Ohio/i });
-            await expect(ohioOptions.first()).toBeVisible({ timeout: 10000 });
-
-            let count = await ohioOptions.count();
-            LoggerUtil.info(`Found ${count} Ohio option(s) via link role`);
-
-            // fallback: look for explicit anchors that reference /ohio or market items
-            if (count === 0) {
-              LoggerUtil.info('No Ohio options found via role=link; trying fallback selectors');
-              const fallbackOhio = page.locator('a[href^="/ohio"], a.market-footer-item:has-text("Ohio"), a:has-text("Ohio")');
-              count = await fallbackOhio.count();
-              LoggerUtil.info(`Found ${count} Ohio option(s) via fallback selectors`);
-              if (count > 0) {
-                LoggerUtil.info('Clicking first fallback Ohio option to navigate to Ohio page');
-                await fallbackOhio.first().click();
-              }
-            } else {
-              // Click the first Ohio option and wait for navigation to Ohio page
-              LoggerUtil.info('Clicking first Ohio option to navigate to Ohio page');
-              await ohioOptions.first().click();
-            }
-            // If no option was clicked (count === 0) then fail fast with screenshot
-            if (count === 0) {
-              LoggerUtil.error('No Ohio option was clicked; failing test with screenshot');
-              await test.info().attach('no-ohio-click', { body: await page.screenshot(), contentType: 'image/png' });
-              throw new Error('No Ohio options found or clicked on Texas page');
-            }
-            await page.waitForURL('**/ohio**', { timeout: 10000 });
-            LoggerUtil.info('Navigation to Ohio page detected');
-
-            // Validate the state landing page shows Ohio using ListingsPage
-            const listingsPage = pm.listingsPage;
-            await expect(listingsPage.mainContent).toBeVisible({ timeout: 10000 });
-            const total = await listingsPage.countStateItems('Ohio');
-            LoggerUtil.info(`Found ${total} Ohio item(s) on listings page`);
-            expect(total).toBeGreaterThan(0);
-
-            await test.info().attach('ohio-search-results', { body: await page.screenshot(), contentType: 'image/png' });
-          } catch (error) {
-            LoggerUtil.error('Error searching for Ohio on state page', { error });
-            throw error;
-          }
-        });
-      } catch (error) {
-        if (error instanceof Error) {
-          LoggerUtil.error('Error selecting Texas or validating navigation', { stack: error.stack });
-        } else {
-          LoggerUtil.error('Error selecting Texas or validating navigation', { error });
-        }
-        throw error;
-      }
-    });
+  await test.info().attach('selection-info', {
+    body: Buffer.from(JSON.stringify({ method: 'random', seed: seedEnv ?? null, idxA, idxB, stateA: stateA.slug, stateB: stateB.slug }, null, 2)),
+    contentType: 'application/json',
   });
+
+  LoggerUtil.info(`Opening home page for random search smoke test (stateA=${stateA.name}, stateB=${stateB.name})`);
+  try {
+    await pm.homePage.open();
+    await expect(page).toHaveURL('https://www.drhorton.com/');
+  } catch (error) {
+    if (error instanceof Error) LoggerUtil.error('Error opening home page or validating URL', { stack: error.stack });
+    else LoggerUtil.error('Error opening home page or validating URL', { error });
+    throw error;
+  }
+
+  await test.step(`Select ${stateA.name} from home search and open map`, async () => {
+    await pm.homePage.selectStateFromSearch(stateA.name, stateA.slug);
+    await attachScreenshot(test.info(), 'state-map-page', page, true);
+  });
+
+  await test.step(`Search ${stateB.name} on ${stateA.name} page and validate listings`, async () => {
+    await pm.stateLandingPage.searchAndOpenState(stateB.name, { attachScreenshots: true, testInfo: test.info(), stateSlug: stateB.slug });
+    const total = await pm.listingsPage.waitForStateListings(stateB.slug, stateB.name);
+    LoggerUtil.info(`Found ${total} ${stateB.name} item(s) on listings page`);
+    expect(total).toBeGreaterThan(0);
+    await attachScreenshot(test.info(), 'state-search-results-list', page, false);
+    await test.info().attach('second-search-results', { body: await page.screenshot(), contentType: 'image/png' });
+  });
+
+});
 
 test('EDGE-404-REDIRECT: Non-existent path redirects to home', { tag: ['@edge'] }, async ({ pm, page }) => {
   await test.step('Navigate to a non-existent path and assert redirect-to-home', async () => {
