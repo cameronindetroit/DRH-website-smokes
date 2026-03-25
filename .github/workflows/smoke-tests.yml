@@ -84,10 +84,15 @@ jobs:
       - name: Run regression tests
         run: |
           BROWSER="${{ inputs.browser || 'chromium' }}"
-          if [ "$BROWSER" = "all" ]; then
-            npx playwright test src/tests/regression
+          DIR="src/tests/regression"
+          if [ -d "$DIR" ] && [ -n "$(find "$DIR" -type f -name '*.spec.ts' -print -quit)" ]; then
+            if [ "$BROWSER" = "all" ]; then
+              npx playwright test "$DIR"
+            else
+              npx playwright test "$DIR" --project="$BROWSER"
+            fi
           else
-            npx playwright test src/tests/regression --project="$BROWSER"
+            echo "No tests found in $DIR — skipping regression job."
           fi
         env:
           CI: true
@@ -123,10 +128,15 @@ jobs:
       - name: Run E2E tests
         run: |
           BROWSER="${{ inputs.browser || 'chromium' }}"
-          if [ "$BROWSER" = "all" ]; then
-            npx playwright test src/tests/e2e
+          DIR="src/tests/e2e"
+          if [ -d "$DIR" ] && [ -n "$(find "$DIR" -type f -name '*.spec.ts' -print -quit)" ]; then
+            if [ "$BROWSER" = "all" ]; then
+              npx playwright test "$DIR"
+            else
+              npx playwright test "$DIR" --project="$BROWSER"
+            fi
           else
-            npx playwright test src/tests/e2e --project="$BROWSER"
+            echo "No tests found in $DIR — skipping E2E job."
           fi
         env:
           CI: true
