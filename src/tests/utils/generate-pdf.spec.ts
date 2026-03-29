@@ -2,6 +2,9 @@ import fs from 'fs';
 import path from 'path';
 import { test } from '@playwright/test';
 
+// Skip PDF generation tests when running in CI (GitHub Actions or other CI envs).
+test.skip(!!(process.env.GITHUB_ACTIONS || process.env.CI), 'Skip PDF generation in CI');
+
 test('generate-edge-negative-smoke-tests-pdf', async ({ page }) => {
   const htmlPath = path.join(process.cwd(), 'plans', 'edge-negative-smoke-tests.html');
   if (!fs.existsSync(htmlPath)) throw new Error('HTML file not found: ' + htmlPath);
