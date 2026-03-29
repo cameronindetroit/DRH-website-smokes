@@ -1188,3 +1188,141 @@
 {"level":"error","message":"Error in navigation step for Who we are","stack":"locator.click: Test ended.\nCall log:\n\u001b[2m  - waiting for getByRole('navigation', { name: 'main' }).getByRole('link', { name: 'Who we are' })\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/navigation/navigationSmoke.spec.ts:31:43\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/navigation/navigationSmoke.spec.ts:28:18","timestamp":"2026-03-24T14:30:46.260Z"}
 {"level":"error","message":"Error verifying community search combobox visibility and placeholder","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('combobox', { name: 'Search by zip, city, state, or community' })\nExpected: visible\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('combobox', { name: 'Search by zip, city, state, or community' })\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:120:51\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:117:16","timestamp":"2026-03-24T14:30:46.362Z"}
 {"level":"error","message":"Error verifying logo link visibility","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: 'D R Horton logo, go to the home page' }).first()\nExpected: visible\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: 'D R Horton logo, go to the home page' }).first()\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:75:48\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/home/homeSmoke.spec.ts:72:16","timestamp":"2026-03-24T14:30:46.485Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:45:48.893Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:45:48.893Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:45:48.893Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:45:48.896Z"}
+{"level":"info","message":"Navigating to a likely-nonexistent path to observe redirect behavior","timestamp":"2026-03-25T19:45:48.896Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:45:48.894Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:45:48.896Z"}
+{"level":"info","message":"Opening home page for random search smoke test (stateA=Colorado, stateB=South Carolina)","timestamp":"2026-03-25T19:45:48.898Z"}
+{"level":"info","message":"Asserting the site redirected the request","timestamp":"2026-03-25T19:45:51.473Z"}
+{"level":"info","message":"Found 2 South Carolina item(s) on listings page","timestamp":"2026-03-25T19:46:14.180Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-25T19:46:16.108Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-25T19:46:52.619Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-25T19:47:16.248Z"}
+{"level":"error","message":"Error verifying page title for Who We Are","stack":"expect.toHaveTitle: Target page, context or browser has been closed\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:23:28\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:20:16","timestamp":"2026-03-25T19:47:16.250Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-25T19:47:52.594Z"}
+{"level":"error","message":"Error verifying page title for Smart Home","stack":"expect.toHaveTitle: Target page, context or browser has been closed\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:82:28\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:79:16","timestamp":"2026-03-25T19:47:52.618Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-25T19:47:58.733Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-25T19:47:58.740Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-25T19:47:59.319Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-25T19:48:00.038Z"}
+{"level":"info","message":"Attaching screenshot of cookie banner visible","timestamp":"2026-03-25T19:48:00.157Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-25T19:48:00.835Z"}
+{"level":"info","message":"Clicking dismiss/close button on cookie banner","timestamp":"2026-03-25T19:48:00.966Z"}
+{"level":"info","message":"Verifying cookie banner is hidden","timestamp":"2026-03-25T19:48:02.090Z"}
+{"level":"info","message":"Attaching screenshot after cookie banner dismiss","timestamp":"2026-03-25T19:48:02.486Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:48:03.103Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:48:04.366Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:48:06.048Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:48:08.036Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:48:10.087Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:48:12.056Z"}
+{"level":"info","message":"Opening home page for random search smoke test (stateA=Georgia, stateB=New Mexico)","timestamp":"2026-03-25T19:48:15.702Z"}
+{"level":"info","message":"Navigating to a likely-nonexistent path to observe redirect behavior","timestamp":"2026-03-25T19:48:24.618Z"}
+{"level":"info","message":"Asserting the site redirected the request","timestamp":"2026-03-25T19:48:25.605Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-25T19:48:27.370Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-25T19:49:07.412Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-25T19:49:27.571Z"}
+{"level":"error","message":"Error verifying page title for Who We Are","stack":"expect.toHaveTitle: Target page, context or browser has been closed\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:23:28\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:20:16","timestamp":"2026-03-25T19:49:27.582Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-25T19:50:05.864Z"}
+{"level":"error","message":"Error verifying page title for Smart Home","stack":"expect.toHaveTitle: Target page, context or browser has been closed\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:82:28\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:79:16","timestamp":"2026-03-25T19:50:05.875Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-25T19:50:10.355Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-25T19:50:10.369Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-25T19:50:11.503Z"}
+{"level":"info","message":"Attaching screenshot of cookie banner visible","timestamp":"2026-03-25T19:50:11.788Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-25T19:50:12.741Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-25T19:50:14.051Z"}
+{"level":"info","message":"Clicking dismiss/close button on cookie banner","timestamp":"2026-03-25T19:50:14.279Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:50:14.425Z"}
+{"level":"info","message":"Verifying cookie banner is hidden","timestamp":"2026-03-25T19:50:15.847Z"}
+{"level":"info","message":"Attaching screenshot after cookie banner dismiss","timestamp":"2026-03-25T19:50:16.256Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:50:17.087Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:50:17.329Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:50:20.108Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:50:22.279Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T19:50:23.126Z"}
+{"level":"info","message":"Opening home page for random search smoke test (stateA=Oklahoma, stateB=West Virginia)","timestamp":"2026-03-25T19:50:36.039Z"}
+{"level":"info","message":"Navigating to a likely-nonexistent path to observe redirect behavior","timestamp":"2026-03-25T19:50:42.128Z"}
+{"level":"info","message":"Asserting the site redirected the request","timestamp":"2026-03-25T19:50:43.983Z"}
+{"level":"info","message":"Found 2 West Virginia item(s) on listings page","timestamp":"2026-03-25T19:50:51.036Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-25T19:50:53.852Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-25T19:51:18.283Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-25T19:51:54.816Z"}
+{"level":"error","message":"Error verifying page title for Who We Are","stack":"expect.toHaveTitle: Target page, context or browser has been closed\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:23:28\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:20:16","timestamp":"2026-03-25T19:51:54.832Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-25T19:52:18.046Z"}
+{"level":"error","message":"Error verifying page title for Smart Home","stack":"expect.toHaveTitle: Target page, context or browser has been closed\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:82:28\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:79:16","timestamp":"2026-03-25T19:52:18.073Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-25T19:52:23.118Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-25T19:52:23.154Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-25T19:52:24.562Z"}
+{"level":"info","message":"Attaching screenshot of cookie banner visible","timestamp":"2026-03-25T19:52:25.110Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-25T19:52:26.413Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-25T19:52:28.253Z"}
+{"level":"info","message":"Clicking dismiss/close button on cookie banner","timestamp":"2026-03-25T19:52:28.486Z"}
+{"level":"info","message":"Verifying cookie banner is hidden","timestamp":"2026-03-25T19:52:29.565Z"}
+{"level":"info","message":"Attaching screenshot after cookie banner dismiss","timestamp":"2026-03-25T19:52:30.038Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T20:03:11.573Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T20:03:11.574Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T20:03:11.574Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T20:03:11.574Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T20:03:11.574Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T20:03:11.574Z"}
+{"level":"info","message":"Navigating to a likely-nonexistent path to observe redirect behavior","timestamp":"2026-03-25T20:03:11.575Z"}
+{"level":"info","message":"Opening home page for random search smoke test (stateA=Arizona, stateB=Alabama)","timestamp":"2026-03-25T20:03:11.576Z"}
+{"level":"info","message":"Asserting the site redirected the request","timestamp":"2026-03-25T20:03:13.946Z"}
+{"level":"info","message":"Found 2 Alabama item(s) on listings page","timestamp":"2026-03-25T20:03:39.011Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-25T20:03:40.713Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-25T20:04:15.325Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-25T20:04:40.834Z"}
+{"level":"error","message":"Error verifying page title for Who We Are","stack":"expect.toHaveTitle: Target page, context or browser has been closed\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:23:28\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:20:16","timestamp":"2026-03-25T20:04:40.837Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-25T20:04:47.015Z"}
+{"level":"error","message":"Error verifying page title for Smart Home","stack":"expect.toHaveTitle: Target page, context or browser has been closed\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:82:28\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/pages/pageLoadSmoke.spec.ts:79:16","timestamp":"2026-03-25T20:04:47.081Z"}
+{"level":"info","message":"Opening home page for random search smoke test (stateA=Idaho, stateB=Maryland)","timestamp":"2026-03-25T20:05:09.361Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T20:05:09.356Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T20:05:09.409Z"}
+{"level":"info","message":"Navigating to a likely-nonexistent path to observe redirect behavior","timestamp":"2026-03-25T20:05:09.415Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T20:05:09.422Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T20:05:09.421Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T20:05:09.472Z"}
+{"level":"info","message":"Opening home page and dismissing cookie banner","timestamp":"2026-03-25T20:05:09.484Z"}
+{"level":"info","message":"Asserting the site redirected the request","timestamp":"2026-03-25T20:05:11.529Z"}
+{"level":"info","message":"Verifying logo link visibility","timestamp":"2026-03-25T20:05:15.877Z"}
+{"level":"info","message":"Scrolling to footer","timestamp":"2026-03-25T20:05:15.879Z"}
+{"level":"info","message":"Verifying home page title","timestamp":"2026-03-25T20:05:15.888Z"}
+{"level":"info","message":"Verifying skip to main content link href","timestamp":"2026-03-25T20:05:15.889Z"}
+{"level":"info","message":"Verifying community search combobox visibility and placeholder","timestamp":"2026-03-25T20:05:15.890Z"}
+{"level":"info","message":"Verifying logo image visibility and alt text","timestamp":"2026-03-25T20:05:15.924Z"}
+{"level":"info","message":"Attaching screenshot for skip to main link","timestamp":"2026-03-25T20:05:15.930Z"}
+{"level":"info","message":"Attaching screenshot for community search","timestamp":"2026-03-25T20:05:15.935Z"}
+{"level":"info","message":"Attaching screenshot for logo rendered","timestamp":"2026-03-25T20:05:15.937Z"}
+{"level":"info","message":"Verifying hero heading visibility","timestamp":"2026-03-25T20:05:16.170Z"}
+{"level":"info","message":"Verifying footer navigation visibility","timestamp":"2026-03-25T20:05:16.180Z"}
+{"level":"info","message":"Verifying footer copyright text visibility","timestamp":"2026-03-25T20:05:16.223Z"}
+{"level":"info","message":"Attaching screenshot for footer rendered","timestamp":"2026-03-25T20:05:16.238Z"}
+{"level":"info","message":"Attaching screenshot for home page loaded","timestamp":"2026-03-25T20:05:16.305Z"}
+{"level":"info","message":"Navigating to /who-we-are","timestamp":"2026-03-25T20:05:17.437Z"}
+{"level":"info","message":"Navigating to /smart-home","timestamp":"2026-03-25T20:05:18.027Z"}
+{"level":"info","message":"Clicking navigation link: Who we are","timestamp":"2026-03-25T20:05:22.604Z"}
+{"level":"info","message":"Verifying page title for Who we are","timestamp":"2026-03-25T20:05:23.086Z"}
+{"level":"info","message":"Verifying page title for Who We Are","timestamp":"2026-03-25T20:05:23.501Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Who We Are","timestamp":"2026-03-25T20:05:23.510Z"}
+{"level":"info","message":"Attaching screenshot for Who We Are page","timestamp":"2026-03-25T20:05:23.520Z"}
+{"level":"info","message":"Verifying no 404 for Who we are","timestamp":"2026-03-25T20:05:23.712Z"}
+{"level":"info","message":"Attaching screenshot for navigation: Who we are","timestamp":"2026-03-25T20:05:23.851Z"}
+{"level":"info","message":"Verifying page title for Smart Home","timestamp":"2026-03-25T20:05:23.881Z"}
+{"level":"info","message":"Verifying h1 heading visibility for Smart Home","timestamp":"2026-03-25T20:05:23.904Z"}
+{"level":"info","message":"Attaching screenshot for Smart Home page","timestamp":"2026-03-25T20:05:23.920Z"}
+{"level":"info","message":"Navigating back to home for next link","timestamp":"2026-03-25T20:05:24.240Z"}
+{"level":"info","message":"Clearing cookies for a clean session","timestamp":"2026-03-25T20:05:24.689Z"}
+{"level":"info","message":"Navigating to home page","timestamp":"2026-03-25T20:05:24.695Z"}
+{"level":"info","message":"Clearing cookies and navigating to home page","timestamp":"2026-03-25T20:05:25.473Z"}
+{"level":"info","message":"Waiting for cookie banner to appear","timestamp":"2026-03-25T20:05:27.837Z"}
+{"level":"info","message":"Verifying cookie banner visibility","timestamp":"2026-03-25T20:05:27.838Z"}
+{"level":"info","message":"Clicking dismiss/close button on cookie banner","timestamp":"2026-03-25T20:05:28.034Z"}
+{"level":"info","message":"Attaching screenshot of cookie banner visible","timestamp":"2026-03-25T20:05:28.127Z"}
+{"level":"info","message":"Clicking navigation link: Smart home","timestamp":"2026-03-25T20:05:28.861Z"}
+{"level":"info","message":"Verifying page title for Smart home","timestamp":"2026-03-25T20:05:28.943Z"}
+{"level":"info","message":"Verifying cookie banner is hidden","timestamp":"2026-03-25T20:05:29.204Z"}
+{"level":"info","message":"Attaching screenshot after cookie banner dismiss","timestamp":"2026-03-25T20:05:30.072Z"}
+{"level":"error","message":"Error in navigation step for Smart home","stack":"Error: \u001b[2mexpect(\u001b[22m\u001b[31mpage\u001b[39m\u001b[2m).\u001b[22mtoHaveTitle\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nExpected pattern: \u001b[32m/Smart Home.*D\\.R\\. Horton/i\u001b[39m\nReceived string:  \u001b[31m\"Access denied | www.drhorton.com used Cloudflare to restrict access | www.drhorton.com | Cloudflare\"\u001b[39m\nTimeout: 5000ms\n\nCall log:\n\u001b[2m  - Expect \"toHaveTitle\" with timeout 5000ms\u001b[22m\n\u001b[2m    2 × unexpected value \"D.R. Horton America's Largest Home Builder | Homes For Sale\"\u001b[22m\n\u001b[2m    - waiting for\" https://www.drhorton.com/smart-home\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"https://www.drhorton.com/smart-home\"\u001b[22m\n\u001b[2m    7 × unexpected value \"Access denied | www.drhorton.com used Cloudflare to restrict access | www.drhorton.com | Cloudflare\"\u001b[22m\n\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/navigation/navigationSmoke.spec.ts:33:30\n    at /Users/cameronbarnes/playWrightAutoationProjects/enterprise-playwright-dr-horton/src/tests/smoke/navigation/navigationSmoke.spec.ts:28:7","timestamp":"2026-03-25T20:05:33.950Z"}
